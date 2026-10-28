@@ -1,0 +1,49 @@
+{
+  "version": "2026-10-22-approved-dialogue-examples-v1",
+  "source": {
+    "title": "Prompt Engineering",
+    "author": "Lee Boonstra",
+    "publication_label": "February 2025",
+    "local_path": "C:\\Users\\Dmitriy\\Downloads\\Prompt Engineering.pdf"
+  },
+  "approved_materials": "../data/dialogue_examples/premeeting_call.v1.json",
+  "prompts": {
+    "analyze_turn.txt": "bd7bf70b373825ecf597634e5a0c1e30d0f7fbdd1ad1b33707a72dfd38e77f8b",
+    "client_role.txt": "173dac493bf13e611f4d844a4710882b61f9e0b542df441cdf6aa02f005b81a4"
+  },
+  "baseline": "archive/2026-10-22-before-approved-examples",
+  "report": "../docs/evidence/2026-10-22-approved-training.json",
+  "previous_revision": {
+    "version": "2026-10-22-dialogue-understanding-v1",
+    "source": {
+      "title": "Prompt Engineering",
+      "author": "Lee Boonstra",
+      "publication_label": "February 2025",
+      "local_path": "C:\\Users\\Dmitriy\\Downloads\\Prompt Engineering.pdf"
+    },
+    "prompts": {
+      "analyze_turn.txt": "511c2574bd5857ad592fd55eb9dd45c9ba678b405746ca8ec421fc8d4dbe973a",
+      "client_role.txt": "146385236281b28296ce8e750a0079695a51dec9d7726f56b1b8585033d5d341"
+    },
+    "baseline": "archive/2026-10-17-before-guide",
+    "report": "../docs/evidence/2026-10-22-dialogue-understanding.json",
+    "previous_revision": {
+      "version": "2026-10-17-question-patience-v1",
+      "prompts": {
+        "analyze_turn.txt": "bec33f503e630ec32a83245fe7d302552add84a9976b99d8074126e63d38c7c5",
+        "client_role.txt": "b2c88da4b73c4c1f02a26eb950b9a04b5371f7614cffd994d12923da2434d98c"
+      },
+      "report": "../docs/evidence/2026-10-17-question-patience.json",
+      "previous_revision": {
+        "version": "2026-10-17-guide-v1",
+        "prompts": {
+          "analyze_turn.txt": "0422f55bcaf3be23040c09d60b1b734e2f46c42cb40280b73cb16b7f2a44da7f",
+          "client_role.txt": "b82ceb913f88743464a058b641a8e4bb07343cdb39ae10b042cc8e6aeeff5fc0"
+        },
+        "report": "../docs/evidence/2026-10-17-prompt-comparison.json"
+      }
+    },
+    "instruction_note": "Понимание коротких ответов в контексте, различение названия и объяснения условия, память клиента и ответ на вопрос сотрудника. Голос отложен до проверки текстовых сценариев."
+  },
+  "instruction_note": "30 согласованных образцов, отбираемых под разрешённую реакцию; 10 контрольных ситуаций вне рабочего контекста. Деловая речь оценивается отдельно после звонка. Дообучение весов не выполнялось."
+}

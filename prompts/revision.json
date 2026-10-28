@@ -1,0 +1,130 @@
+{
+  "version": "2026-10-26-distinct-character-behavior-v1",
+  "source": {
+    "title": "Prompt Engineering",
+    "author": "Lee Boonstra",
+    "publication_label": "February 2025",
+    "local_path": "C:\\Users\\Dmitriy\\Downloads\\Prompt Engineering.pdf"
+  },
+  "prompts": {
+    "analyze_turn.txt": "f3d6eec002f7cc48962a7d18166280ac68a4b67262b37b4d4d2630e81addd28b",
+    "client_role.txt": "6332a461eae23dc11febd675440390e23b3c32bef4aafbed7ee583bc45a1da0c"
+  },
+  "baseline": "archive/2026-10-26-before-character-depth",
+  "previous_revision": {
+    "version": "2026-10-26-conversational-characters-v1",
+    "source": {
+      "title": "Prompt Engineering",
+      "author": "Lee Boonstra",
+      "publication_label": "February 2025",
+      "local_path": "C:\\Users\\Dmitriy\\Downloads\\Prompt Engineering.pdf"
+    },
+    "prompts": {
+      "analyze_turn.txt": "6e25317009ebca4237fbead56141eb7bb357c4b27f825458ab4c05b9bdf52c7d",
+      "client_role.txt": "47c47215397b15680228cf4710ea8b1162a881c0c6909eada09632852ebd34ab"
+    },
+    "baseline": "archive/2026-10-26-before-product-polish",
+    "instruction_note": "Короткая разговорная речь и три манеры общения. Явный вопрос о сохранении встречи не теряется за упоминанием подробностей. Факты, условия карты и методика оценки сохранены.",
+    "previous_revision": {
+      "version": "2026-10-25-brief-phone-auto-review-v1",
+      "source": {
+        "title": "Prompt Engineering",
+        "author": "Lee Boonstra",
+        "publication_label": "February 2025",
+        "local_path": "C:\\Users\\Dmitriy\\Downloads\\Prompt Engineering.pdf"
+      },
+      "prompts": {
+        "analyze_turn.txt": "5320534c94abab8843e901fb5208a30376f0e1f00cb4e74b5cdb295c3afd4f10",
+        "client_role.txt": "777a4b60d56aae2a8fd71b58a37780bae66fb9ccbdabaf12006920af828e621c"
+      },
+      "baseline": "archive/2026-10-25-before-brief-phone-review",
+      "previous_revision": {
+        "version": "2026-10-25-grounded-benefit-dialogue-v1",
+        "source": {
+          "title": "Prompt Engineering",
+          "author": "Lee Boonstra",
+          "publication_label": "February 2025",
+          "local_path": "C:\\Users\\Dmitriy\\Downloads\\Prompt Engineering.pdf"
+        },
+        "approved_materials": "../data/dialogue_examples/premeeting_call.v1.json",
+        "prompts": {
+          "analyze_turn.txt": "6b5afd84214f37cc8a21b6454bcda6d1ae67bbe70dcfd4c19c3c581cc34fc50e",
+          "client_role.txt": "7e2c8667b26121e82aa710433b7f30fed2048b7402b9c51caa15869eb0f42344"
+        },
+        "baseline": "archive/2026-10-25-before-benefit-dialogue",
+        "report": "../docs/evidence/2026-10-25-benefit-dialogue-fix.json",
+        "instruction_note": "Конкретные свойства и личная связь различаются. Части объяснения сохраняются между репликами; клиент не требует повторно общей пользы после содержательного ответа. Окончательные завершения выбирает контроллер без генерации.",
+        "previous_revision": {
+          "version": "2026-10-25-employee-first-greeting-v1",
+          "source": {
+            "title": "Prompt Engineering",
+            "author": "Lee Boonstra",
+            "publication_label": "February 2025",
+            "local_path": "C:\\Users\\Dmitriy\\Downloads\\Prompt Engineering.pdf"
+          },
+          "approved_materials": "../data/dialogue_examples/premeeting_call.v1.json",
+          "prompts": {
+            "analyze_turn.txt": "ccf30cce9b71b19f3bdffac3f64f3d74d7641d04e3caf2406a9074083a423763",
+            "client_role.txt": "057f359f016cf0149cc06b352c0a07eb18fba25e7784ff7025e226f189998f58"
+          },
+          "baseline": "archive/2026-10-25-before-employee-first",
+          "report": "../docs/evidence/2026-10-25-call-opening.json",
+          "instruction_note": "Сотрудник начинает звонок. Клиент сначала здоровается, затем отвечает на напоминание о прежней встрече и сообщает сомнение. Короткого приветствия недостаточно для introduce; прежняя договорённость не считается новым согласием.",
+          "previous_revision": {
+            "version": "2026-10-22-approved-dialogue-examples-v1",
+            "source": {
+              "title": "Prompt Engineering",
+              "author": "Lee Boonstra",
+              "publication_label": "February 2025",
+              "local_path": "C:\\Users\\Dmitriy\\Downloads\\Prompt Engineering.pdf"
+            },
+            "approved_materials": "../data/dialogue_examples/premeeting_call.v1.json",
+            "prompts": {
+              "analyze_turn.txt": "bd7bf70b373825ecf597634e5a0c1e30d0f7fbdd1ad1b33707a72dfd38e77f8b",
+              "client_role.txt": "173dac493bf13e611f4d844a4710882b61f9e0b542df441cdf6aa02f005b81a4"
+            },
+            "baseline": "archive/2026-10-22-before-approved-examples",
+            "report": "../docs/evidence/2026-10-22-approved-training.json",
+            "previous_revision": {
+              "version": "2026-10-22-dialogue-understanding-v1",
+              "source": {
+                "title": "Prompt Engineering",
+                "author": "Lee Boonstra",
+                "publication_label": "February 2025",
+                "local_path": "C:\\Users\\Dmitriy\\Downloads\\Prompt Engineering.pdf"
+              },
+              "prompts": {
+                "analyze_turn.txt": "511c2574bd5857ad592fd55eb9dd45c9ba678b405746ca8ec421fc8d4dbe973a",
+                "client_role.txt": "146385236281b28296ce8e750a0079695a51dec9d7726f56b1b8585033d5d341"
+              },
+              "baseline": "archive/2026-10-17-before-guide",
+              "report": "../docs/evidence/2026-10-22-dialogue-understanding.json",
+              "previous_revision": {
+                "version": "2026-10-17-question-patience-v1",
+                "prompts": {
+                  "analyze_turn.txt": "bec33f503e630ec32a83245fe7d302552add84a9976b99d8074126e63d38c7c5",
+                  "client_role.txt": "b2c88da4b73c4c1f02a26eb950b9a04b5371f7614cffd994d12923da2434d98c"
+                },
+                "report": "../docs/evidence/2026-10-17-question-patience.json",
+                "previous_revision": {
+                  "version": "2026-10-17-guide-v1",
+                  "prompts": {
+                    "analyze_turn.txt": "0422f55bcaf3be23040c09d60b1b734e2f46c42cb40280b73cb16b7f2a44da7f",
+                    "client_role.txt": "b82ceb913f88743464a058b641a8e4bb07343cdb39ae10b042cc8e6aeeff5fc0"
+                  },
+                  "report": "../docs/evidence/2026-10-17-prompt-comparison.json"
+                }
+              },
+              "instruction_note": "Понимание коротких ответов в контексте, различение названия и объяснения условия, память клиента и ответ на вопрос сотрудника. Голос отложен до проверки текстовых сценариев."
+            },
+            "instruction_note": "30 согласованных образцов, отбираемых под разрешённую реакцию; 10 контрольных ситуаций вне рабочего контекста. Деловая речь оценивается отдельно после звонка. Дообучение весов не выполнялось."
+          }
+        }
+      },
+      "report": "../docs/evidence/2026-10-25-phone-auto-review.json",
+      "instruction_note": "Краткий звонок, до двух вопросов клиента по нераскрытым условиям. Честный перенос дополнительных подробностей на встречу и возврат к предложенному согласованию."
+    },
+    "report": "../docs/evidence/2026-10-26-characters-live.json"
+  },
+  "report": "../docs/25-distinct-client-behavior.md"
+}

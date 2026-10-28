@@ -1,0 +1,592 @@
+{
+  "schema_version": "1.0",
+  "package_id": "do-vstrechi-dialogue-examples-2026-10-22-draft-01",
+  "title": "До встречи: короткие ситуации предварительного звонка",
+  "created_on": "2026-10-22",
+  "status": "APPROVED_HELD_OUT_CHECKS_ONLY",
+  "approved": true,
+  "connected_to_application": false,
+  "activation_requires": "Отдельное явное одобрение пользователя и последующее техническое подключение; этот пакет не подключается автоматически.",
+  "origin_notice": "Все русские диалоги — авторские учебные адаптации. Часть воспроизводит отмеченные диалоговые приёмы ABCD и Taskmaster; часть основана на опыте автора и правилах проекта. Это не дословные переводы, не записи банковских клиентов и не результаты интервью.",
+  "role_notice": "Пакет для примеров поведения клиентской модели и отдельной проверки; не база условий ВТБ, не датасет для автоматического дообучения и не готовые оценки сотрудников.",
+  "product_snapshot": {
+    "relative_path": "do-vstrechi/data/products/vtb_debit.v1.json",
+    "version": "1.4.0-memo-and-scoped-loyalty",
+    "sha256": "34fe879219032ad1b738fba00eabfb67964feeb80fce1d1a8b8c6c6db5c7d0b9",
+    "notice": "Основные тарифы закреплены по переданной редакции 01.10.2026. Памятка команды на 17.10 получена 22.10; отдельные условия сверены с индексом официальных страниц. Действующие полные правила кешбэка, РКО и упомянутая новая редакция тарифа ещё нужны. Оценщик использует закреплённые материалы; неизвестные условия не восстанавливаются по памяти.",
+    "new_product_terms_added": false
+  },
+  "scenario_snapshot": {
+    "relative_path": "do-vstrechi/data/scenarios/premeeting_call.v1.json",
+    "version": "1.7.0-responsive-dialogue",
+    "sha256": "370a791bd2f617135238072a04ce4baa084e91b12c4e5945b607ef1dc870a704"
+  },
+  "source_materials": [
+    {
+      "id": "TASKMASTER1",
+      "title": "Taskmaster-1, spoken Wizard-of-Oz dialogues",
+      "url": "https://github.com/google-research-datasets/Taskmaster/tree/master/TM-1-2019",
+      "data_url": "https://raw.githubusercontent.com/google-research-datasets/Taskmaster/master/TM-1-2019/woz-dialogs.json",
+      "license": "CC BY 4.0",
+      "attribution": "Bill Byrne, Karthik Krishnamoorthi, Chinnadhurai Sankar, Arvind Neelakantan, Amit Dubey, Kyu-Young Kim, Andy Cedilnik / Google LLC; accompanying Taskmaster-1 paper (2019).",
+      "actual_inspection": "Загружен официальный JSON на 5507 разговоров; вручную просмотрены выбранные фрагменты. Приём указан в каждой использовавшей его ситуации; это не аудит всего корпуса."
+    },
+    {
+      "id": "ABCD",
+      "title": "Action-Based Conversations Dataset — official sample",
+      "url": "https://github.com/asappresearch/abcd",
+      "data_url": "https://raw.githubusercontent.com/asappresearch/abcd/master/data/abcd_sample.json",
+      "license": "MIT (official repository LICENSE)",
+      "attribution": "Copyright (c) 2021 ASAPP Research. ABCD / Chen et al. (2021).",
+      "actual_inspection": "Просмотрены три демонстрационных диалога; в адаптации использованы отмеченные фрагменты разговора 3592. Клиентские реквизиты из исходника в пакет не переносятся."
+    },
+    {
+      "id": "PROJECT",
+      "title": "До встречи — текущий сценарий и опыт автора",
+      "url": null,
+      "local_references": [
+        "do-vstrechi/data/scenarios/premeeting_call.v1.json",
+        "do-vstrechi/docs/04-first-scenario.md",
+        "do-vstrechi/data/sources/author/2026-10-16-delivery-process.txt"
+      ],
+      "actual_inspection": "Учтено последнее решение исключить фотографирование. Правило паспорта — учебная операционная деталь по опыту автора, не опубликованный регламент ВТБ."
+    }
+  ],
+  "corpus_manifest": [
+    {
+      "file": "abcd_sample.json",
+      "url": "https://raw.githubusercontent.com/asappresearch/abcd/master/data/abcd_sample.json",
+      "sha256": "151e0c487493ab376bb5115538f3bfd6d2f460c94f9daa5cdf04e55bccdf4808",
+      "bytes": 38934
+    },
+    {
+      "file": "abcd_license.txt",
+      "url": "https://raw.githubusercontent.com/asappresearch/abcd/master/LICENSE",
+      "sha256": "3ab7e179a7f13027b7bc64293541f0e9beacca3701cade67fb8fce78c2d9317b",
+      "bytes": 1071
+    },
+    {
+      "file": "taskmaster_woz.json",
+      "url": "https://raw.githubusercontent.com/google-research-datasets/Taskmaster/master/TM-1-2019/woz-dialogs.json",
+      "sha256": "cd3bc4e968487315d412c044d30af2bf0a4b33c3ef8b74c589f1e1fa832bf72f",
+      "bytes": 37204053
+    },
+    {
+      "file": "taskmaster_readme.md",
+      "url": "https://raw.githubusercontent.com/google-research-datasets/Taskmaster/master/TM-1-2019/README.md",
+      "sha256": "05e1bc05724716ca7905f567a2ec30d99c8d2f5f58e926c2ca7d9da116002446",
+      "bytes": 8046
+    }
+  ],
+  "usage": "MANUAL_OR_FUTURE_OFFLINE_CHECK_ONLY_DO_NOT_SEND_EXPECTED_REPLIES_TO_CLIENT",
+  "count": 10,
+  "cases": [
+    {
+      "id": "DV-04",
+      "group": "Начало звонка",
+      "title": "Короткое «да» относится к объяснению",
+      "intended_use": "held_out_check",
+      "approval": {
+        "status": "approved_for_check_only",
+        "approved_on": "2026-10-22"
+      },
+      "synthetic": true,
+      "language": "ru",
+      "channel": "phone",
+      "scenario_id": "premeeting_call",
+      "preconditions": "Последнее «да» клиента было ответом на разрешение объяснить. Условия и встреча не согласованы.",
+      "history": [
+        {
+          "role": "client",
+          "text": "Я карту пока получать не хочу."
+        },
+        {
+          "role": "employee",
+          "text": "Можно коротко объяснить, что по ней бесплатно?"
+        },
+        {
+          "role": "client",
+          "text": "Да."
+        }
+      ],
+      "employee_turn": "Тогда я подъеду, раз вы согласны?",
+      "employee_claim_status": "no_product_claims",
+      "product_fact_ids": [],
+      "target_client_behavior": {
+        "required_meaning": "Исправить ошибочное толкование согласия и вернуть разговор к объяснению.",
+        "allowed_reply_variants": [
+          "Я согласился послушать, а не на встречу. Сначала расскажите об условиях.",
+          "Нет, подождите. Я только разрешил объяснить, зачем мне эта карта."
+        ],
+        "forbidden_behaviors": [
+          "Не подтверждать встречу задним числом.",
+          "Не отказываться от своих предыдущих слов: согласие слушать остаётся."
+        ],
+        "state_after_example": "Слушать готов; встреча не подтверждена.",
+        "existing_reaction_hint_not_a_runtime_command": "missing_explanation"
+      },
+      "review_checks_not_for_client_prompt": [
+        "Система определяет предмет согласия по предыдущему вопросу."
+      ],
+      "provenance": {
+        "dataset_id": "PROJECT",
+        "borrowed_pattern": "Контекстный смысл короткого ответа и разделение решений клиента.",
+        "adaptation": "Авторская учебная ситуация по сообщениям автора проекта и действующему сценарию. Не перевод из внешней базы и не запись настоящего звонка."
+      }
+    },
+    {
+      "id": "DV-08",
+      "group": "Причина сомнения",
+      "title": "Один лишь бесплатный выпуск ещё не объясняет пользу",
+      "intended_use": "held_out_check",
+      "approval": {
+        "status": "approved_for_check_only",
+        "approved_on": "2026-10-22"
+      },
+      "synthetic": true,
+      "language": "ru",
+      "channel": "phone",
+      "scenario_id": "premeeting_call",
+      "preconditions": "Сотрудник объяснил стоимость и отсутствие необходимости отказываться от привычной карты. У Алексея сохраняется сомнение в пользе.",
+      "history": [
+        {
+          "role": "client",
+          "text": "Не хочу заводить вторую карту, и так своей пользуюсь."
+        }
+      ],
+      "employee_turn": "Выпуск обычной дебетовой карты и её обслуживание — ноль рублей. Бесплатно привезём. Свою карту вы можете сохранить, менять банк для этого не нужно.",
+      "employee_claim_status": "supported_within_frozen_scope",
+      "product_fact_ids": [
+        "P01",
+        "P04"
+      ],
+      "target_client_behavior": {
+        "required_meaning": "Признать услышанное и уточнить уместную пользу без повторного вопроса о цене обслуживания.",
+        "allowed_reply_variants": [
+          "То, что свою можно оставить, понятно. Но в чём смысл второй именно для меня?",
+          "Платить за обслуживание не надо — хорошо. А пользоваться ей зачем, если привычная уже есть?"
+        ],
+        "forbidden_behaviors": [
+          "Не спрашивать заново, платное ли обслуживание.",
+          "Не требовать немедленного закрытия старой карты.",
+          "Не соглашаться автоматически из-за нулевой стоимости."
+        ],
+        "state_after_example": "Стоимость услышана; вопрос о пользе остаётся открытым.",
+        "existing_reaction_hint_not_a_runtime_command": "product_question:benefit_relevance"
+      },
+      "review_checks_not_for_client_prompt": [
+        "Содержательная характеристика не забыта.",
+        "Согласие остаётся самостоятельным решением клиента."
+      ],
+      "provenance": {
+        "dataset_id": "PROJECT",
+        "borrowed_pattern": "Связь конкретной характеристики продукта с действительным сомнением клиента.",
+        "adaptation": "Авторская учебная ситуация по сообщениям автора проекта и действующему сценарию. Не перевод из внешней базы и не запись настоящего звонка."
+      }
+    },
+    {
+      "id": "DV-12",
+      "group": "Стоимость и услуги",
+      "title": "«Бесплатная» не означает «без любой комиссии»",
+      "intended_use": "held_out_check",
+      "approval": {
+        "status": "approved_for_check_only",
+        "approved_on": "2026-10-22"
+      },
+      "synthetic": true,
+      "language": "ru",
+      "channel": "phone",
+      "scenario_id": "premeeting_call",
+      "preconditions": "Клиент слышит абсолютное обещание; полного тарифа у него нет.",
+      "history": [
+        {
+          "role": "client",
+          "text": "А платные услуги вообще бывают?"
+        }
+      ],
+      "employee_turn": "Нет, по этой карте за любые операции и любые услуги платить никогда не придётся.",
+      "employee_claim_status": "contradicts_frozen_data",
+      "product_fact_ids": [
+        "P01",
+        "P03",
+        "P17"
+      ],
+      "target_client_behavior": {
+        "required_meaning": "Проверить границы абсолютного обещания вопросом или просьбой об источнике.",
+        "allowed_reply_variants": [
+          "За любые? А уведомления и другие дополнительные услуги тоже входят?",
+          "Звучит слишком широко. Можно посмотреть, где прописано, что вообще никаких комиссий нет?"
+        ],
+        "forbidden_behaviors": [
+          "Не соглашаться с абсолютной бесплатностью.",
+          "Не выдавать точный перечень тарифных исключений от лица клиента."
+        ],
+        "state_after_example": "Условия требуют уточнения; согласия на встречу нет.",
+        "existing_reaction_hint_not_a_runtime_command": "source_question"
+      },
+      "review_checks_not_for_client_prompt": [
+        "Оценщик должен сверить утверждение с данными, даже если клиент не назвал правильную цену."
+      ],
+      "provenance": {
+        "dataset_id": "PROJECT",
+        "borrowed_pattern": "Проверка абсолютных обещаний без превращения клиента в консультанта по тарифам.",
+        "adaptation": "Авторская учебная ситуация по сообщениям автора проекта и действующему сценарию. Не перевод из внешней базы и не запись настоящего звонка."
+      }
+    },
+    {
+      "id": "DV-16",
+      "group": "Кешбэк",
+      "title": "Максимум нельзя выдавать за обязательное начисление",
+      "intended_use": "held_out_check",
+      "approval": {
+        "status": "approved_for_check_only",
+        "approved_on": "2026-10-22"
+      },
+      "synthetic": true,
+      "language": "ru",
+      "channel": "phone",
+      "scenario_id": "premeeting_call",
+      "preconditions": "Расходы клиента неизвестны. Сотрудник пообещал фиксированную выплату.",
+      "history": [
+        {
+          "role": "client",
+          "text": "А сколько я с этой карты буду получать?"
+        }
+      ],
+      "employee_turn": "Каждый месяц вам точно будут возвращаться три тысячи рублей.",
+      "employee_claim_status": "contradicts_frozen_data",
+      "product_fact_ids": [
+        "P02",
+        "P05"
+      ],
+      "target_client_behavior": {
+        "required_meaning": "Поставить под вопрос гарантированное начисление, не зная правильного расчёта.",
+        "allowed_reply_variants": [
+          "Даже если почти ничего не покупать? Как это считается?",
+          "Это точно выплата каждый месяц, а не максимальная сумма кешбэка?"
+        ],
+        "forbidden_behaviors": [
+          "Не радоваться обещанной гарантии как установленному факту.",
+          "Не рассчитывать выдуманный личный кешбэк."
+        ],
+        "state_after_example": "Обещание требует проверки; встречи ещё нет.",
+        "existing_reaction_hint_not_a_runtime_command": "source_question"
+      },
+      "review_checks_not_for_client_prompt": [
+        "Неверное обещание распознано по данным, а не по уверенности сотрудника."
+      ],
+      "provenance": {
+        "dataset_id": "PROJECT",
+        "borrowed_pattern": "Предельная величина и гарантированный результат — разные вещи; личные расходы не заданы.",
+        "adaptation": "Авторская учебная ситуация по сообщениям автора проекта и действующему сценарию. Не перевод из внешней базы и не запись настоящего звонка."
+      }
+    },
+    {
+      "id": "DV-20",
+      "group": "Категории и применимость",
+      "title": "Временные условия представлены как постоянные",
+      "intended_use": "held_out_check",
+      "approval": {
+        "status": "approved_for_check_only",
+        "approved_on": "2026-10-22"
+      },
+      "synthetic": true,
+      "language": "ru",
+      "channel": "phone",
+      "scenario_id": "premeeting_call",
+      "preconditions": "Статус клиента не установлен; сотрудник сделал абсолютное обещание о пяти категориях.",
+      "history": [
+        {
+          "role": "client",
+          "text": "С категориями каждый месяц что-то меняется?"
+        }
+      ],
+      "employee_turn": "Нет, пять категорий у вас будут всегда, это всем положено без условий.",
+      "employee_claim_status": "contradicts_frozen_data",
+      "product_fact_ids": [
+        "P08"
+      ],
+      "target_client_behavior": {
+        "required_meaning": "Уточнить срок и применимость обещания без самостоятельного исправления тарифа.",
+        "allowed_reply_variants": [
+          "То есть постоянно и без условий? Где это можно посмотреть?",
+          "А это не временное предложение? Хочу понять, что будет потом."
+        ],
+        "forbidden_behaviors": [
+          "Не считать пять категорий гарантированными навсегда.",
+          "Не подсказывать точную длительность акции от лица клиента."
+        ],
+        "state_after_example": "Срок и применимость требуют уточнения.",
+        "existing_reaction_hint_not_a_runtime_command": "source_question"
+      },
+      "review_checks_not_for_client_prompt": [
+        "Оценщик сохраняет ошибку независимо от того, насколько убедительно она произнесена."
+      ],
+      "provenance": {
+        "dataset_id": "PROJECT",
+        "borrowed_pattern": "Проверка переноса временного предложения на всех клиентов и на неограниченный срок.",
+        "adaptation": "Авторская учебная ситуация по сообщениям автора проекта и действующему сценарию. Не перевод из внешней базы и не запись настоящего звонка."
+      }
+    },
+    {
+      "id": "DV-24",
+      "group": "Неизвестное и ошибки",
+      "title": "Явное исправление числовой ошибки",
+      "intended_use": "held_out_check",
+      "approval": {
+        "status": "approved_for_check_only",
+        "approved_on": "2026-10-22"
+      },
+      "synthetic": true,
+      "language": "ru",
+      "channel": "phone",
+      "scenario_id": "premeeting_call",
+      "preconditions": "Неправильная сумма была произнесена, затем явно отменена. Исправление совпадает с закреплённым фактом P05.",
+      "history": [
+        {
+          "role": "employee",
+          "text": "Максимальный кешбэк за месяц — пять тысяч рублей."
+        },
+        {
+          "role": "client",
+          "text": "Вы уверены? Где это указано?"
+        }
+      ],
+      "employee_turn": "Извините, я ошибся. В условиях указан максимум три тысячи рублей за месяц. Это верхний предел, а не обещанная выплата. Прежнюю сумму прошу не учитывать.",
+      "employee_claim_status": "explicit_correction_matches_frozen_data",
+      "product_fact_ids": [
+        "P05"
+      ],
+      "target_client_behavior": {
+        "required_meaning": "Принять явное исправление; не продолжать спор так, будто ошибку не исправили.",
+        "allowed_reply_variants": [
+          "Понял, спасибо, что поправили. Теперь ясно, что это максимум, а не выплата каждый месяц.",
+          "Хорошо, ориентируемся на исправленное условие."
+        ],
+        "forbidden_behaviors": [
+          "Не подтверждать прежнюю сумму.",
+          "Не утверждать, что исходной ошибки вообще не было.",
+          "Не выставлять сотруднику оценку от лица клиента."
+        ],
+        "state_after_example": "Действующее объяснение исправлено; история ошибки остаётся для разбора.",
+        "existing_reaction_hint_not_a_runtime_command": "detail_answered"
+      },
+      "review_checks_not_for_client_prompt": [
+        "Оценщик видит первоначальную ошибку и её исправление.",
+        "Пять тысяч в истории — специально ошибочный пример, а не условие продукта."
+      ],
+      "provenance": {
+        "dataset_id": "TASKMASTER1",
+        "conversation_id": "dlg-00438e65-24d5-4b63-8618-669c7f1b7851",
+        "turn_indices_zero_based": [
+          16,
+          19
+        ],
+        "borrowed_pattern": "Сотрудник исправляет названную цену; клиент принимает исправление. Числа и банковские условия заменены по P05.",
+        "adaptation": "Перенос диалогового приёма в банковский звонок. Русский текст написан заново; это не дословный перевод и не реплика реального клиента ВТБ."
+      }
+    },
+    {
+      "id": "DV-28",
+      "group": "Память и связность",
+      "title": "Длинная реплика не заменяет ответ",
+      "intended_use": "held_out_check",
+      "approval": {
+        "status": "approved_for_check_only",
+        "approved_on": "2026-10-22"
+      },
+      "synthetic": true,
+      "language": "ru",
+      "channel": "phone",
+      "scenario_id": "premeeting_call",
+      "preconditions": "Существенный вопрос остался открытым. Сотрудник объединил встречу, реквизиты и паспорт в одну реплику. Оригинал паспорта у Алексея есть.",
+      "history": [
+        {
+          "role": "client",
+          "text": "Какие условия нужны, чтобы получить этот максимальный кешбэк?"
+        },
+        {
+          "role": "employee",
+          "text": "Это надо отдельно посмотреть."
+        },
+        {
+          "role": "client",
+          "text": "Тогда я пока не готов подтверждать встречу без ответа."
+        }
+      ],
+      "employee_turn": "Хорошо, тогда сегодня в восемнадцать часов, город Учебный, улица Примерная, дом десять. Оригинал паспорта будет? До встречи!",
+      "employee_claim_status": "essential_question_unresolved",
+      "product_fact_ids": [
+        "P02",
+        "P05",
+        "P07"
+      ],
+      "target_client_behavior": {
+        "required_meaning": "Не позволить составной реплике превратить отсутствие согласия в подтверждённую встречу.",
+        "allowed_reply_variants": [
+          "Подождите, я встречу не подтвердил. По условиям ответа пока нет.",
+          "Паспорт у меня есть, но это не значит, что я согласился. Сначала нужен ответ по условиям."
+        ],
+        "forbidden_behaviors": [
+          "Не отвечать «тогда жду вас».",
+          "Не воспринимать наличие паспорта как согласие.",
+          "Не забывать открытый вопрос из-за прощания сотрудника."
+        ],
+        "state_after_example": "Встреча не согласована; вопрос по кешбэку остаётся открытым.",
+        "existing_reaction_hint_not_a_runtime_command": "unresolved_ack / passport_objection"
+      },
+      "review_checks_not_for_client_prompt": [
+        "Вымышленные время и адрес совпадают с учебной карточкой.",
+        "Паспорт и согласие — разные факты."
+      ],
+      "provenance": {
+        "dataset_id": "PROJECT",
+        "borrowed_pattern": "Открытая существенная тема не закрывается называнием адреса и вопросом о паспорте.",
+        "adaptation": "Авторская учебная ситуация по сообщениям автора проекта и действующему сценарию. Не перевод из внешней базы и не запись настоящего звонка."
+      }
+    },
+    {
+      "id": "DV-32",
+      "group": "Договорённость",
+      "title": "Клиент не подсказывает пропущенный критерий",
+      "intended_use": "held_out_check",
+      "approval": {
+        "status": "approved_for_check_only",
+        "approved_on": "2026-10-22"
+      },
+      "synthetic": true,
+      "language": "ru",
+      "channel": "phone",
+      "scenario_id": "premeeting_call",
+      "preconditions": "Встреча согласована. Вопрос о паспорте ещё не задавался; сотрудник пока не попрощался.",
+      "history": [
+        {
+          "role": "client",
+          "text": "Встречу оставляем."
+        }
+      ],
+      "employee_turn": "Тогда сегодня в восемнадцать часов, город Учебный, улица Примерная, дом десять. Всё верно?",
+      "employee_claim_status": "no_product_claims",
+      "product_fact_ids": [],
+      "target_client_behavior": {
+        "required_meaning": "Подтвердить только запрошенные реквизиты и оставить сотруднику возможность продолжить.",
+        "allowed_reply_variants": [
+          "Да, всё верно.",
+          "Да, время и адрес верные."
+        ],
+        "forbidden_behaviors": [
+          "Не говорить «а про паспорт вы забыли».",
+          "Не добавлять наличие паспорта без вопроса.",
+          "Не ставить себе или сотруднику зачёт.",
+          "Не затягивать бесконечно, если сотрудник затем сам завершит разговор."
+        ],
+        "state_after_example": "Реквизиты подтверждены; вопрос о паспорте ещё не задан. Звонок пока открыт.",
+        "existing_reaction_hint_not_a_runtime_command": "details_confirmed"
+      },
+      "review_checks_not_for_client_prompt": [
+        "Пропуск сотрудника не исправляется инициативой симулятора."
+      ],
+      "provenance": {
+        "dataset_id": "PROJECT",
+        "borrowed_pattern": "Клиент не помогает проходить чек-лист; отсутствие вопроса о паспорте должно оставаться видимым в разборе.",
+        "adaptation": "Авторская учебная ситуация по сообщениям автора проекта и действующему сценарию. Не перевод из внешней базы и не запись настоящего звонка."
+      }
+    },
+    {
+      "id": "DV-36",
+      "group": "Отказ и завершение",
+      "title": "«Нет, всё понятно» — отказ от новых вопросов",
+      "intended_use": "held_out_check",
+      "approval": {
+        "status": "approved_for_check_only",
+        "approved_on": "2026-10-22"
+      },
+      "synthetic": true,
+      "language": "ru",
+      "channel": "phone",
+      "scenario_id": "premeeting_call",
+      "preconditions": "Встреча ранее явно согласована, реквизиты и паспорт подтверждены. Отрицание относится к наличию вопросов.",
+      "history": [
+        {
+          "role": "employee",
+          "text": "Тогда встреча подтверждена; время, адрес и паспорт мы уточнили. Остались вопросы по тому, что обсудили?"
+        }
+      ],
+      "employee_turn": "Если вопросов нет, тогда до встречи.",
+      "employee_claim_status": "no_product_claims",
+      "product_fact_ids": [],
+      "target_client_behavior": {
+        "required_meaning": "Попрощаться, сохранив согласованную встречу.",
+        "allowed_reply_variants": [
+          "Нет, всё понятно. До встречи.",
+          "Вопросов больше нет, спасибо. Жду вас."
+        ],
+        "forbidden_behaviors": [
+          "Не считать слово «нет» отказом от карты.",
+          "Не открывать заново закрытые вопросы.",
+          "Не выдумывать дополнительный продукт."
+        ],
+        "state_after_example": "Встреча сохраняется; звонок закончен.",
+        "existing_reaction_hint_not_a_runtime_command": "appointment"
+      },
+      "review_checks_not_for_client_prompt": [
+        "Учтён предмет отрицания в контексте предыдущего вопроса."
+      ],
+      "provenance": {
+        "dataset_id": "TASKMASTER1",
+        "conversation_id": "dlg-0f6631f4-e90f-4386-a974-6e126017058b",
+        "turn_indices_zero_based": [
+          21,
+          24
+        ],
+        "borrowed_pattern": "Отрицательный ответ на вопрос о дополнительной помощи не отменяет основную договорённость.",
+        "adaptation": "Перенос диалогового приёма в банковский звонок. Русский текст написан заново; это не дословный перевод и не реплика реального клиента ВТБ."
+      }
+    },
+    {
+      "id": "DV-40",
+      "group": "Сложные реплики",
+      "title": "Сброс — событие, а не произнесённая реплика",
+      "intended_use": "held_out_check",
+      "approval": {
+        "status": "approved_for_check_only",
+        "approved_on": "2026-10-22"
+      },
+      "synthetic": true,
+      "language": "ru",
+      "channel": "phone",
+      "scenario_id": "premeeting_call",
+      "preconditions": "Для этого отдельного проверочного случая выбран исход «сброс». Предшествующий окончательный отказ уже был.",
+      "history": [
+        {
+          "role": "client",
+          "text": "Я попросил закончить разговор. Больше ничего обсуждать не буду."
+        }
+      ],
+      "employee_turn": "Подождите, я ещё не закончил, обязательно нужно дослушать.",
+      "employee_claim_status": "no_product_claims",
+      "product_fact_ids": [],
+      "target_client_behavior": {
+        "required_meaning": "Контроллер завершает соединение событием client_hangup. Языковая модель после этого не генерирует реплик.",
+        "allowed_reply_variants": [],
+        "forbidden_behaviors": [
+          "Не произносить вслух «клиент сбросил звонок».",
+          "Не генерировать «алло, вы меня слышите?» от лица клиента после сброса.",
+          "Не задавать вопросов и не продолжать тренировку после события."
+        ],
+        "state_after_example": "Соединение разорвано. Последующих реплик клиента и сотрудника в звонке нет.",
+        "existing_reaction_hint_not_a_runtime_command": "NO_LLM_CALL:client_hangup"
+      },
+      "review_checks_not_for_client_prompt": [
+        "Отсутствие текста — ожидаемый результат этого события, а не ошибка.",
+        "Оценщик учитывает только действия до разрыва."
+      ],
+      "provenance": {
+        "dataset_id": "PROJECT",
+        "borrowed_pattern": "По опыту автора окончательный отказ может выражаться сбросом. Техническое событие создаёт контроллер, а не клиентская LLM.",
+        "adaptation": "Авторская учебная ситуация по сообщениям автора проекта и действующему сценарию. Не перевод из внешней базы и не запись настоящего звонка."
+      }
+    }
+  ],
+  "approved_on": "2026-10-22"
+}

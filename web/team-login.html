@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0062ff"><title>До встречи · проверка командой</title>
+  <link rel="stylesheet" href="/team-login.css"><script src="/team-login.js" defer></script>
+</head>
+<body><main>
+  <span class="tag">ДО ВСТРЕЧИ</span>
+  <div class="mark" aria-hidden="true">↗</div>
+  <h1>Попробуем<br>настоящий разговор?</h1>
+  <p>Командная проверка тренажёра для выездных представителей банка.</p>
+  <form id="login-form">
+    <label for="code">Код доступа от команды</label>
+    <input id="code" name="code" type="password" autocomplete="current-password" maxlength="100" required autofocus>
+    <button id="enter" type="submit">Открыть тренажёр <span aria-hidden="true">→</span></button>
+    <p id="error" role="alert" hidden></p>
+  </form>
+  <div class="note">Ваша история сохранится в этом браузере. Другие участники её не увидят. Для тренировки используйте вымышленные данные.</div>
+</main></body></html>

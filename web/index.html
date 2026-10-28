@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0062ff">
+  <title>До встречи — практика разговора</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/app.css">
+  <link rel="stylesheet" href="/vtb-theme.css">
+  <script src="/voice.js" defer></script>
+  <script src="/review-ui.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="До встречи — главная"><span class="brand-symbol"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6 6h19v14H14l-6 5v-5H6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 11h8M12 15h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>до встречи<span class="brand-sub">ПРАКТИКА ДИАЛОГА</span></span></a>
+    <p class="nav-label">РАБОЧЕЕ ПРОСТРАНСТВО</p>
+    <nav aria-label="Основная навигация">
+      <button class="nav-item active" data-nav="practice"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="4"/><path d="m10 8 6 4-6 4V8Z"/></svg></span> Практика</button>
+      <button class="nav-item" data-nav="history"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10a8 8 0 1 1 1 7M4 5v5h5M12 7v5l3 2"/></svg></span> Мои попытки</button>
+      <button class="nav-item" data-nav="help"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 2-2.5 2-2.5 4M12 17h.01"/></svg></span> Как это работает</button>
+    </nav>
+    <div class="sidebar-bottom"><span class="status-dot"></span> Учебный контур<p>Тренируем разговор.<br>Все клиенты вымышлены.</p><span class="small">ДО ВСТРЕЧИ · ВТБ</span></div>
+  </aside>
+  <main>
+    <header class="topbar"><div><span class="eyebrow">ПОДГОТОВКА ПРЕДСТАВИТЕЛЯ</span><p>От первого звонка — к встрече</p></div><div class="user"><span>Учебная среда</span><span class="user-avatar">ВП</span></div></header>
+    <div id="loading" class="loading">Подключаем учебное пространство…</div>
+    <section id="setup" hidden>
+      <div class="section-heading"><div><span class="eyebrow">БИБЛИОТЕКА СИТУАЦИЙ</span><h1>Подготовьтесь к встрече</h1></div><span class="pill">Текст и голос</span></div>
+      <div class="hero">
+        <div class="hero-content"><span class="hero-kicker">УПРАЖНЕНИЕ 01 <span>ДЕБЕТОВАЯ КАРТА</span></span><h2>Клиент передумал.<br>Встреча ещё возможна.</h2><p>«У меня уже есть карта другого банка».<br>Помогите клиенту разобраться в условиях и принять решение о встрече.</p><div class="hero-tags"><span>Звонок до встречи</span><span>Работа с сомнением</span></div></div>
+        <div class="hero-art" aria-hidden="true"><div class="hero-orbit"></div><div class="dialog-preview"><div class="preview-header"><span class="preview-avatar">А</span><span><strong>Алексей</strong><small>Звонок перед встречей</small></span><span class="preview-status">На связи</span></div><div class="preview-message client"><small>КЛИЕНТ</small><p>У меня уже есть карта другого банка.</p></div><div class="preview-message employee"><small>ПРЕДСТАВИТЕЛЬ</small><p>Могу кратко рассказать об условиях?</p></div><div class="preview-caption"><span></span>Слушать. Объяснять. Договариваться.</div></div></div>
+      </div>
+      <div class="prep-grid"><article><span class="step-number">01</span><h3>Поймите сомнение</h3><p>Клиент заказал карту, но теперь не видит в ней необходимости.</p></article><article><span class="step-number">02</span><h3>Объясните пользу</h3><p>Коротко, по существу и с корректными условиями продукта.</p></article><article><span class="step-number">03</span><h3>Договоритесь о встрече</h3><p>При согласии подтвердите время и адрес. При отказе завершите разговор.</p></article></div>
+      <div class="setup-panel"><div class="panel-heading"><h3>Настройте тренировку</h3><span>Режим, характер и исход разговора</span></div>
+        <div class="mode-grid"><label class="mode-card"><input type="radio" name="mode" value="guided" checked><span><strong>Посмотреть сценарий</strong><small>Выбирайте готовые реплики.<br>Демонстрация без нейросети.</small></span><span class="mode-icon" aria-hidden="true">↗</span></label><label class="mode-card" id="ai-card"><input id="ai-mode" type="radio" name="mode" value="gigachat"><span><strong>Говорить своими словами</strong><small id="ai-description">Пишите свободно.<br>Клиент отвечает по ситуации.</small></span><span class="mode-icon" aria-hidden="true">✳</span></label></div>
+        <div class="character-selector"><label class="field-label" for="character">Характер клиента</label><select id="character"></select><p id="character-description" class="small"></p></div><div class="setup-actions"><div><label class="field-label" for="ending">Ветка учебного сценария</label><select id="ending"><option value="appointment">Клиент готов к обсуждению</option><option value="decline">Клиент останется при своём решении</option><option value="rude_decline">Резкий окончательный отказ</option><option value="hangup">Клиент прервёт звонок</option></select></div><button id="start" class="button primary" disabled>Начать звонок <span aria-hidden="true">↗</span></button></div>
+        <p id="ai-setup-hint" class="inline-note" hidden>Для свободного ввода настройте ключ через start.cmd. <button id="setup-help" class="text-button">Инструкция</button></p>
+      </div>
+    </section>
+    <section id="workspace" hidden>
+      <div class="section-heading"><div><span class="eyebrow">УПРАЖНЕНИЕ 01</span><h1>Клиент передумал до встречи</h1></div><span id="session-mode" class="pill"></span></div>
+      <div class="training-grid"><div class="conversation"><div class="conversation-header"><span class="client-avatar">А</span><div><strong>Алексей</strong><p><span id="phase">Виртуальный клиент</span> · <span id="client-character"></span></p></div><span id="turn-counter" class="turn-counter"></span></div><div id="transcript" class="transcript" role="log" aria-label="История разговора" aria-live="polite"></div>
+        <div id="activity" class="activity" role="status" hidden></div><p id="client-note" class="reply-notice" role="status" hidden></p>
+        <div id="guided-composer" class="composer"><div class="composer-heading"><strong>Ваша следующая реплика</strong><span>Готовые варианты · без ИИ</span></div><div id="choices" class="choices"></div></div>
+        <form id="free-composer" class="composer" hidden><label for="employee-text" class="field-label">Ваша реплика</label><textarea id="employee-text" maxlength="4000" rows="2" placeholder="Напишите так, как сказали бы клиенту…"></textarea><div id="voice-toolbar" class="voice-toolbar" hidden><button id="voice-record" type="button" class="button quiet">Записать реплику</button><span id="voice-status" class="small" role="status"></span></div><div class="compose-footer"><span>Ctrl + Enter — отправить</span><button id="send" type="submit" class="button primary">Отправить ↗</button></div></form>
+        <div id="ended-banner" class="ended-banner" hidden><strong id="ended-outcome"></strong><p>Разберите свои реплики по критериям подготовки.</p><button id="open-review" class="button primary">Перейти к разбору →</button></div>
+      </div><aside class="meeting-card"><span class="eyebrow">КАРТОЧКА ВСТРЕЧИ</span><div class="meeting-client"><span class="client-avatar">А</span><div><strong>Алексей</strong><p>Дебетовая карта ВТБ</p></div></div><dl><dt>Когда</dt><dd id="meeting-time"></dd><dt>Где</dt><dd id="meeting-address"></dd></dl><p id="character-note" class="character-note"></p><details class="meeting-task"><summary>Задача звонка</summary><div class="meeting-goal"><strong>Задача звонка</strong><p>Объяснить подходящую пользу карты и сохранить встречу. Уважать окончательное решение клиента.</p></div></details><p class="small">Имя и реквизиты вымышлены.</p><div class="playback-settings"><label><input type="checkbox" id="speak-client"> Озвучивать клиента</label><span id="speak-hint" class="small"></span><button type="button" id="replay-client" class="text-button" hidden>Повторить ответ ↻</button></div><button id="finish" class="button quiet">Завершить упражнение</button></aside></div>
+    </section>
+    <section id="review-page" hidden>
+      <div class="section-heading"><div><span class="eyebrow">ОБРАТНАЯ СВЯЗЬ</span><h1>Разбор разговора</h1></div><button id="new-attempt" class="button quiet">Новая попытка ↗</button></div>
+      <div class="review-overview"><div class="review-summary"><div><span class="eyebrow">ИСХОД СИТУАЦИИ</span><h2 id="review-outcome"></h2></div><div class="summary-number"><strong id="review-turns"></strong><span id="review-turns-label">реплик сотрудника</span></div></div><section id="review-rating" class="review-rating" aria-label="Рейтинг выполнения критериев" hidden></section></div>
+      <div class="review-notice"><span aria-hidden="true">i</span><div><p id="review-notice-text"></p><div class="evaluation-controls"><button id="request-evaluation" class="button primary">Получить оценку GigaChat</button><span id="evaluation-cost-note" class="small">Проверим разговор и условия продукта. Результат сохранится.</span></div></div></div>
+      <div id="review-progress" class="review-progress" role="status" hidden><strong>Проверяем разговор и условия карты…</strong><p>Сверяем утверждения, цитаты и применимость критериев. Это может занять до нескольких минут.</p></div>
+      <div id="review-verdict" class="evaluation-verdict" aria-live="polite" hidden></div>
+      <div id="review-highlights" class="review-highlights" hidden></div>
+      <div class="section-caption"><h2 class="details-heading">Критерии разговора</h2><span>Цитаты и обоснования — в подробностях</span></div>
+      <div id="criteria" class="criteria-grid"></div><section id="claim-checks" class="claim-checks" hidden></section>
+      <div class="review-actions"><button id="back-to-call" class="button quiet">← Посмотреть разговор</button><button id="download-review" class="button primary">Скачать разбор ↓</button></div>
+    </section>
+    <section id="history-page" hidden><div class="section-heading"><div><span class="eyebrow">МОЯ ПРАКТИКА</span><h1>Попытки и разговоры</h1></div><button id="history-new" class="button primary">К упражнению ↗</button></div><div id="history-list" class="history-list"></div></section>
+    <footer>До встречи <span>Учебный прототип для подготовки выездных представителей · ВТБ</span></footer>
+  </main>
+  <div id="toast" class="toast" role="alert" hidden><span id="toast-text"></span><button id="retry" class="text-button" hidden>Повторить отправку</button><button id="close-toast" aria-label="Закрыть уведомление">×</button></div>
+  <dialog id="help"><button id="close-help" class="dialog-close" aria-label="Закрыть справку">×</button><span class="eyebrow">КАК ЭТО РАБОТАЕТ</span><h2>Сначала практика.<br>Потом настоящая встреча.</h2><p>Вы тренируете звонок с вымышленным клиентом. Сценарий задаёт его обстоятельства и допустимые реакции.</p><h3>Два способа пройти упражнение</h3><p><strong>Демонстрация:</strong> выбирайте подготовленные реплики и смотрите разные ветки. Нейросеть в этом режиме не используется.</p><p><strong>Свободный ввод:</strong> пишите своими словами. GigaChat понимает действия сотрудника и формулирует ответы клиента с учётом разговора. Сценарий задаёт его обстоятельства и допустимые реакции. При ошибке генерации используется готовая фраза и появляется уведомление.</p><h3>Как подключить GigaChat</h3><p>Создайте проект в <a href="https://developers.sber.ru/studio/workspaces/my-space/get/gigachat-api" target="_blank" rel="noopener">Studio</a>. Затем откройте start.cmd и выберите «Настроить ключ». После настройки перезапустите локальный сервер.</p><p class="small">Ключ хранится в локальном .env. После звонка можно отдельно запросить оценку GigaChat по критериям и условиям карты. В свободном вводе можно записать реплику через Vosk, проверить распознанный текст и отправить. Аудио обрабатывается на сервере этого приложения и не сохраняется в истории. Для озвучивания ответов включите «Озвучивать клиента»: используется русский голос устройства, если он установлен. История попыток сохраняется на этом компьютере.</p></dialog>
+</body>
+</html>

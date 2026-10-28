@@ -1,0 +1,34 @@
+{
+  "version": "1.3.1",
+  "prompt_sha256": "24f5147e3e2bae283928201cdf6e546db19f8668b03ea128f7d5f58310682069",
+  "model_default": "GigaChat-2-Pro",
+  "instruction_note": "Связанные исходные реплики позволяют оценивать объяснение по частям. Конкретная количественная цитата может дополняться только известными частями той же темы; исходные ссылки модели сохраняются. Слоган, отрицательная оценка и неподтверждённое обещание автоматически в зачёт не превращаются.",
+  "evaluation_report": "../docs/evidence/2026-10-25-benefit-dialogue-fix.json",
+  "revision_report": "../docs/21-grounded-benefit-dialogue.md",
+  "previous_revision": {
+    "version": "1.3.0",
+    "prompt_sha256": "be59d31043c5e97276e1c32e4559396f61f9f6728f17bca342619d2102dd78c3",
+    "model_default": "GigaChat-2-Pro",
+    "instruction_note": "Добавлен C10: уважительная деловая речь. У замечания обязательны исходная реплика сотрудника, причина и корректная замена. Достоверность сравнений проверяется отдельно; C10 участвует в общем рейтинге наравне с остальными применимыми критериями.",
+    "evaluation_report": "../docs/evidence/2026-10-22-approved-training.json",
+    "revision_report": "../docs/19-approved-examples-and-business-speech.md",
+    "previous_revision": {
+      "version": "1.2.0",
+      "prompt_sha256": "aa7f2c8fc101036fdc773c7d025b045608ede943c69224c7c6a57471f6f2d03d",
+      "model_default": "GigaChat-2-Pro",
+      "instruction_note": "Конкретность количественных выгод и связь с сомнением клиента. Отсутствие цитаты не даёт зачёт и направляет отдельный критерий на проверку. Рейтинг рассчитывается программно из критериев.",
+      "evaluation_report": "../docs/evidence/2026-10-17-concrete-grading.json",
+      "previous_revision": {
+        "version": "1.1.0",
+        "prompt_sha256": "345839c27c2db28af6906cebdfdcd9146b4a0c8e90bc5294de4046d6930a93bd",
+        "evaluation_report": "../docs/evidence/2026-10-17-session-evaluation.json",
+        "previous_revision": {
+          "version": "1.0.0",
+          "prompt_sha256": "697ec0630c346d048a9a23edf0e3785f3cddee2e8063f0c55a5bf67aa29f5092",
+          "evaluation_report": "../docs/evidence/2026-10-17-session-evaluation.json"
+        }
+      },
+      "revision_report": "../docs/16-concrete-benefits-and-rating.md"
+    }
+  }
+}

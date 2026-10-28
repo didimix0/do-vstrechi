@@ -1,0 +1,40 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.pfx
+*.p12
+credentials*.json
+
+# Runtime data, recordings, sessions, models and temporary sharing credentials
+var/
+*.sqlite
+*.sqlite3
+*.db
+*.wav
+*.mp3
+*.webm
+*.log
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+dist/
+build/
+*.egg-info/
+.DS_Store
+Thumbs.db
+
+# Bank documents and local training datasets are intentionally not published
+data/*
+!data/README.md
+*.docx
+*.xlsx
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.crt
