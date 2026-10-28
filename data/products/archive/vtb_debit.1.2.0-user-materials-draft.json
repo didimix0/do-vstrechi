@@ -1,0 +1,406 @@
+{
+  "id": "vtb_debit",
+  "version": "1.2.0-user-materials-draft",
+  "name": "Обычная дебетовая карта ВТБ: учебный паспорт",
+  "review_status": "user_supplied_official_site_materials_requires_full_rules_review",
+  "client_scope": "Обычная дебетовая карта без установленного зарплатного или пенсионного статуса. Уровень Расти с ВТБ, сбережения, статус нового клиента, подписка и участие в семейной группе Алексея неизвестны.",
+  "source_retrieved_on": "2026-10-15",
+  "effective_from": null,
+  "source_url": "https://www.vtb.ru/personal/karty/debetovye/multikarta/",
+  "verification": {
+    "method": "Сведения из поискового индекса официальных страниц ВТБ",
+    "direct_page_fetch_succeeded": false,
+    "tariff_documents_reviewed": false,
+    "notice": "Прямое открытие страниц завершилось тайм-аутом. Дата получения поисковой выдачи не является датой вступления тарифа в силу или доказательством неизменности условий.",
+    "user_materials_received_on": "2026-10-16",
+    "latest_direct_fetch_on": "2026-10-16",
+    "latest_direct_fetch_results": {
+      "debit_card": "HTTP_502",
+      "grow_with_vtb": "timeout"
+    },
+    "latest_material_method": "user_pasted_site_text_and_two_screenshots_with_user_provided_page_urls"
+  },
+  "notice": "Рабочий паспорт дополнен текстом и двумя скриншотами, переданными автором 16.10.2026. Ссылки на страницы указаны автором; прямое получение страниц не удалось. Дата действия тарифов, месяц категорий и полные правила не установлены. Данные пригодны как контекст с указанными ограничениями, а не как окончательный эталон автоматического зачёта.",
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Дебетовая карта ВТБ — раздел о стоимости и условиях",
+      "url": "https://www.vtb.ru/personal/karty/debetovye/multikarta/",
+      "retrieved_on": "2026-10-15",
+      "access_method": "official_page_search_index",
+      "index_crawl_age_reported": "2 weeks ago"
+    },
+    {
+      "id": "S02",
+      "title": "Дебетовая карта с бесплатным обслуживанием",
+      "url": "https://www.vtb.ru/personal/karty/debetovye/debetovaya-karta-s-besplatnym-obsluzhivaniyem/",
+      "retrieved_on": "2026-10-15",
+      "access_method": "official_page_search_index",
+      "index_crawl_age_reported": "last month"
+    },
+    {
+      "id": "S03",
+      "title": "Дебетовая карта с кешбэком — вопросы о начислении и выборе категорий",
+      "url": "https://www.vtb.ru/personal/karty/debetovye/s-keshbekom/",
+      "retrieved_on": "2026-10-15",
+      "access_method": "official_page_search_index",
+      "index_crawl_age_reported": "last month"
+    },
+    {
+      "id": "U01",
+      "title": "Текст с сайта ВТБ, переданный автором",
+      "local_path": "data/sources/vtb/2026-10-16-batch-01/received-text.txt",
+      "declared_urls": [
+        "https://www.vtb.ru/personal/karty/debetovye/multikarta/",
+        "https://www.vtb.ru/personal/rasti/"
+      ],
+      "access_method": "user_pasted_text",
+      "received_on": "2026-10-16",
+      "formatting": "Оформление и переносы строк нормализованы; повторяющиеся блоки сохранены, изображения и технические маркеры отделены от текста.",
+      "independently_fetched": false
+    },
+    {
+      "id": "U02",
+      "title": "Скриншот основного предложения дебетовой карты",
+      "local_path": "data/sources/vtb/2026-10-16-batch-01/debit-card-overview.png",
+      "url": "https://www.vtb.ru/personal/karty/debetovye/multikarta/",
+      "access_method": "user_screenshot",
+      "received_on": "2026-10-16",
+      "captured_on": null
+    },
+    {
+      "id": "U03",
+      "title": "Скриншот категорий этого месяца",
+      "local_path": "data/sources/vtb/2026-10-16-batch-01/cashback-category-snapshot.png",
+      "url": "https://www.vtb.ru/personal/karty/debetovye/multikarta/",
+      "access_method": "user_screenshot",
+      "received_on": "2026-10-16",
+      "captured_on": null,
+      "offer_month": null,
+      "client_eligibility_known": false
+    }
+  ],
+  "facts": [
+    {
+      "id": "P01",
+      "text": "В присланных условиях выпуск, обслуживание и перевыпуск обычной дебетовой карты указаны бесплатными. Это не означает бесплатность любых дополнительных услуг или неизменность тарифов навсегда.",
+      "values": {
+        "issue_rub": 0,
+        "service_rub": 0,
+        "reissue_rub": 0
+      },
+      "source_ids": [
+        "U01",
+        "U02"
+      ],
+      "source_quote": "Стоимость выпуска, обслуживания и перевыпуска\nБесплатно",
+      "status": "user_supplied_site_excerpt_requires_full_rules_review"
+    },
+    {
+      "id": "P02",
+      "text": "Кешбэк начисляется рублями за подходящие покупки в выбранных категориях; категории обновляются каждый месяц. На скриншоте есть отдельная категория «Все покупки» с 2%, но её месяц и доступность клиенту неизвестны: нельзя обещать этот процент всем без выбора категории, исключений и лимитов.",
+      "values": {
+        "reward_currency": "RUB",
+        "selection_period": "month",
+        "all_purchases_category_snapshot_percent": 2,
+        "snapshot_month": null
+      },
+      "source_ids": [
+        "U01",
+        "U03"
+      ],
+      "source_quote": "Кешбэк рублями, а не бонусами",
+      "status": "user_supplied_site_excerpt_requires_full_rules_review"
+    },
+    {
+      "id": "P03",
+      "text": "Уведомления по операциям стоят 129 рублей в месяц только при подключении. В «Расти с ВТБ» указаны 99 рублей для Серебряного уровня и скидка без точной суммы для Золотого. Бесплатное обслуживание карты не делает уведомления автоматически бесплатными.",
+      "values": {
+        "base_monthly_rub": 129,
+        "silver_monthly_rub": 99,
+        "gold_monthly_rub": null,
+        "only_if_connected": true
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "129 ₽ в месяц только при условии подключения.",
+      "status": "user_supplied_site_excerpt_requires_full_rules_review"
+    },
+    {
+      "id": "P04",
+      "text": "Доставка указана бесплатной; сроки зависят от адреса и загруженности выездных сотрудников. Надпись «Доставим завтра» на скриншоте не устанавливает универсальную гарантию доставки на следующий день или фиксированную длительность выдачи.",
+      "values": {
+        "delivery_rub": 0,
+        "guaranteed_delivery_days": null,
+        "guaranteed_meeting_minutes": null
+      },
+      "source_ids": [
+        "U01",
+        "U02"
+      ],
+      "source_quote": "Сроки доставки зависят от адреса и загруженности сотрудников выездного канала",
+      "status": "user_supplied_site_excerpt_requires_full_rules_review"
+    },
+    {
+      "id": "P05",
+      "text": "Максимальный кешбэк за покупки по карте указан как 3000 рублей в месяц. Это верхний предел, а не гарантированное начисление. Порядок суммирования с партнёрскими начислениями требует полных правил.",
+      "values": {
+        "monthly_cashback_cap_rub": 3000
+      },
+      "source_ids": [
+        "U01",
+        "U02"
+      ],
+      "source_quote": "До 15% в категориях, максимально 3 000 ₽ в месяц",
+      "status": "user_supplied_site_excerpt_requires_full_rules_review"
+    },
+    {
+      "id": "P06",
+      "text": "Выпуск и обслуживание дополнительной карты для близких указаны бесплатными.",
+      "values": {
+        "issue_rub": 0,
+        "service_rub": 0
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "Дополнительная карта для близких\nБесплатно — выпуск и обслуживание",
+      "status": "user_supplied_site_excerpt_requires_full_rules_review"
+    },
+    {
+      "id": "P07",
+      "text": "В предложении указан кешбэк до 15% в категориях. Максимальный процент не относится ко всем покупкам и всем категориям; действуют правила и ограничения выбранного предложения.",
+      "values": {
+        "maximum_advertised_percent": 15,
+        "is_universal_rate": false
+      },
+      "source_ids": [
+        "U01",
+        "U02"
+      ],
+      "source_quote": "До 15% в категориях, максимально 3 000 ₽ в месяц",
+      "status": "user_supplied_site_excerpt_requires_full_rules_review"
+    },
+    {
+      "id": "P08",
+      "text": "Пять категорий для ежедневных покупок доступны новым клиентам в пробном периоде до трёх месяцев: месяц открытия карты плюс два следующих. Право Алексея на этот период не установлено; пять категорий не обещаются всем навсегда.",
+      "values": {
+        "categories": 5,
+        "maximum_trial_calendar_months": 3,
+        "includes_opening_month": true,
+        "following_months": 2
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "5 категорий кешбэка доступны всем новым клиентам в рамках пробного периода до 3 месяцев: месяц открытия карты плюс 2 месяца к этому периоду.",
+      "status": "user_supplied_site_excerpt_requires_full_rules_review"
+    },
+    {
+      "id": "P09",
+      "text": "Категории выбираются в мобильном приложении или веб-версии ВТБ Онлайн. Банк рекомендует выбирать их с 26-го числа заранее для начисления с начала следующего месяца; это рекомендация, а не единственный разрешённый день выбора.",
+      "values": {
+        "recommended_selection_day": 26,
+        "categories_update": "monthly"
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "Мы рекомендуем выбирать заранее — 26 числа каждого месяца.",
+      "status": "user_supplied_site_excerpt_requires_full_rules_review"
+    },
+    {
+      "id": "P10",
+      "text": "Для клиентов со сбережениями более 50000 рублей на счетах и вкладах ВТБ предлагаются специальные категории со звёздочкой. Сбережения Алексея и доступные ему категории неизвестны; дополнительные условия нужно сверить.",
+      "values": {
+        "savings_threshold_rub": 50000,
+        "threshold_comparison": "strictly_greater_than"
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "Для клиентов со сбережениями более 50 000 ₽ на счетах и вкладах ВТБ будут предложены специальные категории",
+      "status": "user_supplied_site_excerpt_requires_full_rules_review"
+    },
+    {
+      "id": "P11",
+      "text": "Для переводов по номеру телефона в ВТБ Онлайн в другие банки через СБП указан объём до 300000 рублей в месяц без комиссии. Нельзя переносить этот объём на любые способы переводов, собственные счета и все виды операций без проверки правил.",
+      "values": {
+        "commission_free_monthly_rub": 300000,
+        "channel": "SBP_phone_number_in_VTB_Online"
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "В другие банки на сумму до 300 000 ₽ с использованием СБП в месяц",
+      "status": "user_supplied_site_excerpt_requires_full_rules_review"
+    },
+    {
+      "id": "P12",
+      "text": "Переводы по номеру телефона в ВТБ Онлайн на счета других клиентов ВТБ указаны без комиссии. Числовой лимит по этой строке в переданном фрагменте не установлен.",
+      "values": {
+        "commission_free_amount_rub": null
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "По сумме на счет других клиентов ВТБ",
+      "status": "user_supplied_site_excerpt_requires_full_rules_review"
+    },
+    {
+      "id": "P13",
+      "text": "Оплата коммунальных услуг и мобильной связи в ВТБ Онлайн указана без комиссии. Это не обещание отсутствия комиссий у любых платежей и каналов.",
+      "values": {
+        "commission_rub": 0,
+        "payment_types": [
+          "utilities",
+          "mobile_phone"
+        ],
+        "channel": "VTB_Online"
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "— Коммунальных услуг\n— Мобильной связи",
+      "status": "user_supplied_site_excerpt_requires_full_rules_review"
+    },
+    {
+      "id": "P14",
+      "text": "Для обычной карты снятие в банкоматах группы ВТБ и банков-партнёров указано без комиссии до 1000000 рублей в месяц. Это не общий лимит выдачи и не бесплатное снятие в любом банке.",
+      "values": {
+        "commission_free_monthly_rub": 1000000,
+        "atm_scope": [
+          "VTB_group",
+          "partner_banks"
+        ]
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "В банкоматах группы ВТБ и банков-партнеров до 1 000 000 ₽ в месяц",
+      "status": "user_supplied_site_excerpt_requires_full_rules_review"
+    },
+    {
+      "id": "P15",
+      "text": "Для зарплатных клиентов и получателей пенсии на текущие счета ВТБ отдельно описано бесплатное снятие в банкоматах группы ВТБ и партнёров, а в банкоматах любых банков по стране — до 200000 рублей в месяц. Этот статус Алексею не присвоен; отдельный лимит по первой части нужно сверить с тарифом.",
+      "values": {
+        "other_banks_commission_free_monthly_rub": 200000,
+        "eligible_segments": [
+          "payroll",
+          "pension_paid_to_VTB_current_account"
+        ],
+        "VTB_and_partner_limit_in_special_segment": null
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "В банкоматах любых банков по всей стране до 200 000 ₽ в месяц",
+      "status": "user_supplied_site_excerpt_requires_full_rules_review"
+    },
+    {
+      "id": "P16",
+      "text": "Лимиты выдачи наличных в банкоматах указаны как 350000 рублей ежедневно и 2000000 рублей в месяц. Они отличаются от суммы снятия без комиссии.",
+      "values": {
+        "daily_withdrawal_limit_rub": 350000,
+        "monthly_withdrawal_limit_rub": 2000000
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "350 000 ₽ ежедневно\n2 млн ₽ в месяц",
+      "status": "user_supplied_site_excerpt_requires_full_rules_review"
+    }
+  ],
+  "not_established": [
+    "Доступные Алексею категории, его уровень и месяц предложения на скриншоте",
+    "Право Алексея на пробный период нового клиента, специальные категории, семейную группу и подписку",
+    "Условия карты другого банка и сравнительная экономия",
+    "Полные тарифы, исключения, MCC-коды и порядок расчёта и выплаты кешбэка",
+    "Даты действия условий, год упомянутых изменений и индивидуальные пороги Расти с ВТБ",
+    "Сочетание партнёрского кешбэка с месячным пределом и между программами",
+    "Точные условия платёжных, валютных, инвестиционных и семейных предложений"
+  ],
+  "claim_examples": [
+    {
+      "claim": "Выпуск и обслуживание карты бесплатные",
+      "review_hint": "Поддерживается публичной страницей в рамках базового продукта; сверить тариф перед итоговой оценкой",
+      "fact_ids": [
+        "P01"
+      ]
+    },
+    {
+      "claim": "Кешбэк зависит от выбранных категорий и условий программы",
+      "review_hint": "Поддерживается публичной страницей",
+      "fact_ids": [
+        "P02",
+        "P05"
+      ]
+    },
+    {
+      "claim": "Кешбэк начисляется на любые покупки без ограничений",
+      "review_hint": "Противоречит описанию категорий и исключений; кандидат существенной ошибки",
+      "fact_ids": [
+        "P02"
+      ]
+    },
+    {
+      "claim": "Вы гарантированно будете получать 3000 рублей каждый месяц",
+      "review_hint": "Подменяет верхний предел гарантией; кандидат существенной ошибки",
+      "fact_ids": [
+        "P05"
+      ]
+    },
+    {
+      "claim": "Наша карта точно выгоднее вашей",
+      "review_hint": "Не подтверждено: условий другой карты и расходов клиента нет; не объявлять сравнение доказанно ложным без дополнительных данных",
+      "fact_ids": []
+    },
+    {
+      "claim": "Выдача займёт ровно пять минут",
+      "review_hint": "Не подтверждено материалами; это не установленный факт",
+      "fact_ids": []
+    },
+    {
+      "claim": "Кешбэк до 15% доступен в отдельных категориях с условиями и лимитом",
+      "review_hint": "Соответствует присланному описанию; максимум не является гарантией для каждого клиента",
+      "fact_ids": [
+        "P02",
+        "P05",
+        "P07"
+      ]
+    },
+    {
+      "claim": "Пять категорий будут доступны вам всегда",
+      "review_hint": "Не подтверждено: пять категорий зависят от пробного периода или уровня; профиль клиента неизвестен",
+      "fact_ids": [
+        "P08"
+      ]
+    },
+    {
+      "claim": "На присланном скриншоте есть категория Все покупки с кешбэком 2%",
+      "review_hint": "Снимок действительно содержит такую категорию; месяц и право клиента на выбор неизвестны. Само упоминание категории не считать ложным",
+      "fact_ids": [
+        "P02"
+      ]
+    },
+    {
+      "claim": "Можно снимать два миллиона в любом банкомате без комиссии",
+      "review_hint": "Смешаны месячный лимит выдачи, бесплатный объём, сеть банкоматов и статус клиента",
+      "fact_ids": [
+        "P14",
+        "P15",
+        "P16"
+      ]
+    },
+    {
+      "claim": "Уведомления стоят 129 рублей в месяц, если их подключить",
+      "review_hint": "Указано в присланном описании обычной карты; отдельно учитывать статус программы",
+      "fact_ids": [
+        "P03"
+      ]
+    }
+  ],
+  "user_materials_received_on": "2026-10-16",
+  "supplementary_catalog": "data/products/vtb_offers.2026-10-16.json"
+}

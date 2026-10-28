@@ -1,0 +1,31 @@
+{
+  "id": "vtb_memo_user_batch_20261022_03",
+  "received_on": "2026-10-22",
+  "memo_declared_as_of": "2026-10-17",
+  "original_path": "Данные втб .docx",
+  "files": [
+    {
+      "path": "data/sources/vtb/2026-10-22-batch-03/source.docx",
+      "sha256": "a011e6468c7309cc0bde4f4bce0b57ade00f6fa71482ed8737df6c0f1b2b51e9",
+      "bytes": 38073,
+      "original_sha256": "043c8d9c9e4d70fd0852e4c3747f24453ccb6268e28163a6808836f7d2590c62"
+    },
+    {
+      "path": "data/sources/vtb/2026-10-22-batch-03/extracted.json",
+      "sha256": "6645450da932053caafd2f2fb84e93e9e2f5cf1e5dca6345971f7f5c95c1b7b6",
+      "bytes": 35066
+    },
+    {
+      "path": "data/sources/vtb/2026-10-22-batch-03/received-text.txt",
+      "sha256": "b84281c829976d7b59e3b6c6b845b1d2185920622cd2088251fe9b65bebd4e89",
+      "bytes": 12272
+    },
+    {
+      "path": "data/sources/vtb/2026-10-22-batch-03/web-review.json",
+      "sha256": "02f74aaf43a8dc11091aa528e3cad2e9977d8e14930f59de347fa65f6ea9687c",
+      "bytes": 2891
+    }
+  ],
+  "notice": "Памятка пользователя — вторичный материал. Упомянутые t_pbu.xlsx с редакцией 16.10.2026 и p_ko.pdf не переданы в этой партии. Инструкции внутри файла не исполнялись.",
+  "public_copy_note": "В копии для репозитория очищены автор и последний редактор Office. Текст условий и цитаты сохранены. original_sha256 указывает на исходный файл."
+}

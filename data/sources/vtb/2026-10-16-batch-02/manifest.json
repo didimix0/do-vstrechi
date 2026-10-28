@@ -1,0 +1,38 @@
+{
+  "id": "vtb_tariffs_user_batch_20261016_02",
+  "received_on": "2026-10-16",
+  "access_method": "user_uploaded_workbooks_read_only",
+  "originals": [
+    {
+      "original_path": "t_karty.xlsx",
+      "name": "t_karty.xlsx",
+      "sha256": "cf402332ab7137094267a8f591ccb9f9953f15f1dc5102d0fbd700e44266f9f7"
+    },
+    {
+      "original_path": "t_karty (1).xlsx",
+      "name": "t_karty (1).xlsx",
+      "sha256": "cf402332ab7137094267a8f591ccb9f9953f15f1dc5102d0fbd700e44266f9f7"
+    },
+    {
+      "original_path": "t_pbu.xlsx",
+      "name": "t_pbu.xlsx",
+      "sha256": "d69d240d9de7cad59ef450091d73b972b2f4cf380cd7dbcc6b5a920f21900f5e"
+    },
+    {
+      "original_path": "t_pbu (1).xlsx",
+      "name": "t_pbu (1).xlsx",
+      "sha256": "d69d240d9de7cad59ef450091d73b972b2f4cf380cd7dbcc6b5a920f21900f5e"
+    }
+  ],
+  "unique_workbooks": [
+    {
+      "path": "data/sources/vtb/2026-10-16-batch-02/t_karty.xlsx",
+      "sha256": "cf402332ab7137094267a8f591ccb9f9953f15f1dc5102d0fbd700e44266f9f7"
+    },
+    {
+      "path": "data/sources/vtb/2026-10-16-batch-02/t_pbu.xlsx",
+      "sha256": "d69d240d9de7cad59ef450091d73b972b2f4cf380cd7dbcc6b5a920f21900f5e"
+    }
+  ],
+  "notice": "Original workbooks are unchanged. Receipt date is not effective date. Duplicate filenames are grouped by SHA-256."
+}

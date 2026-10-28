@@ -1,0 +1,18 @@
+{
+  "id": "meeting",
+  "version": "1.0.0-draft",
+  "review_status": "draft",
+  "passing_rule": "Все применимые обязательные критерии выполнены, подтверждённых существенных ошибок нет, спорные оценки разрешены. Исход решения клиента не определяет зачёт.",
+  "criteria": [
+    {"id": "C01", "title": "Представился и обозначил цель", "required": true, "applies_when": "начало встречи", "candidate_actions": ["introduce"], "fact_ids": []},
+    {"id": "C02", "title": "Выяснил причину отказа", "required": true, "applies_when": "клиент выразил сомнение и допускает обсуждение", "candidate_actions": ["ask_reason"], "fact_ids": []},
+    {"id": "C03", "title": "Уточнил потребность клиента", "required": true, "applies_when": "клиент согласен обсуждать пользу продукта", "candidate_actions": ["ask_needs"], "fact_ids": []},
+    {"id": "C04", "title": "Связал объяснение с потребностью", "required": true, "applies_when": "сотрудник объясняет преимущества", "candidate_actions": ["explain_service", "explain_cashback"], "fact_ids": ["P01", "P02"]},
+    {"id": "C05", "title": "Верно объяснил существенные условия", "required": true, "applies_when": "сотрудник сообщил условия продукта", "candidate_actions": ["explain_service", "explain_cashback", "possible_product_error"], "fact_ids": ["P01", "P02", "P03"]},
+    {"id": "C06", "title": "Согласовал следующий шаг или корректное завершение", "required": true, "applies_when": "завершение обсуждения", "candidate_actions": ["propose_next_step", "respect_refusal", "end_meeting"], "fact_ids": []},
+    {"id": "C07", "title": "Уважал окончательное решение клиента", "required": true, "applies_when": "клиент обозначил решение", "candidate_actions": ["respect_refusal", "pressure"], "fact_ids": []}
+  ],
+  "critical_error_candidates": ["Неподтверждённое обещание", "Существенно неверное условие", "Давление после окончательного отказа"],
+  "note": "Коды действий лишь находят фрагменты для проверки. Наличие кода не означает выполнение критерия. Применимость и существенность требуют отдельной проверки."
+}
+

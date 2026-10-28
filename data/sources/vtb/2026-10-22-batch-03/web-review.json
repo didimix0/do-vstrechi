@@ -1,0 +1,34 @@
+{
+  "checked_on": "2026-10-22",
+  "method": "official_domain_search_index_after_direct_fetch_502",
+  "direct_fetch": {
+    "https://www.vtb.ru/personal/karty/programma-loyalnosti/": "HTTP_502",
+    "https://www.vtb.ru/personal/rasti/": "HTTP_502",
+    "https://www.vtb.ru/personal/karty/pensionnye/": "HTTP_502",
+    "https://www.vtb.ru/personal/vklady-i-scheta/traty/": "HTTP_502"
+  },
+  "indexed_pages": [
+    {
+      "source_id": "W01",
+      "url": "https://www.vtb.ru/personal/rasti/",
+      "crawl_age_reported": "last month",
+      "exact_excerpt": "Бесплатные уведомления от банка. Необходимо проверить подключение",
+      "reviewed_meaning": "На Золотом уровне уведомления бесплатны, подключение нужно проверить. Для уровня выбираются два действия из трёх; 30 покупок относятся к действию Тратьте, 25 дней хранения суммируются."
+    },
+    {
+      "source_id": "W02",
+      "url": "https://www.vtb.ru/personal/karty/programma-loyalnosti/",
+      "crawl_age_reported": "last month",
+      "exact_excerpt": "Новым клиентам — 2% кешбэка на все",
+      "reviewed_meaning": "В первый месяц для новых клиентов описаны 2%; критерий нового клиента и полный список исключений не проверены. Банк указывает выплату до 20-го числа следующего месяца и месячный предел 3000 рублей для Мультикарты. На странице назван сентябрь без подтверждения года. Фрагмент о годовом значении неоднозначен: отдельный годовой лимит не установлен этой проверкой."
+    },
+    {
+      "source_id": "W03",
+      "url": "https://www.vtb.ru/personal/karty/pensionnye/",
+      "crawl_age_reported": "last month",
+      "exact_excerpt": "Категория «Аптеки» доступна к выбору каждый месяц",
+      "reviewed_meaning": "Пенсионная карта имеет отдельные условия. Регулярная доступность категории Аптеки не доказывает единый процент для каждого клиента. Полные тарифные значения пенсии из памятки не подтверждены этим фрагментом."
+    }
+  ],
+  "notice": "Дата поиска не является датой действия. Поисковый индекс не заменяет действующие полные правила."
+}

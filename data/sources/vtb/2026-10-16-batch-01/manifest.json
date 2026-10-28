@@ -1,0 +1,41 @@
+{
+  "id": "vtb_offers_user_batch_20261016_01",
+  "received_on": "2026-10-16",
+  "origin": "Текст и скриншоты, переданные пользователем; ссылки на страницы получены отдельным ответом.",
+  "declared_urls": [
+    "https://www.vtb.ru/personal/karty/debetovye/multikarta/",
+    "https://www.vtb.ru/personal/rasti/"
+  ],
+  "formatting": "Текст нормализован по переносам, пробелам и оформлению; интерфейсные image/svg и ссылки на иллюстрации не считаются банковскими условиями.",
+  "illustration_urls_in_user_message": [
+    "https://www.vtb.ru/media-files/vtb.ru/sitepages/personal/karty/debetovye/sportkarta/sportivnaya_l_market_mob_2x.webp",
+    "https://www.vtb.ru/media-files/vtb.ru/sitepages/personal/karty/debetovye/sportkarta/sportivnaya_l_food_mob_2x.webp"
+  ],
+  "independent_verification": {
+    "attempted_on": "2026-10-16",
+    "debit_card": "HTTP_502",
+    "grow_with_vtb": "timeout",
+    "full_tariffs_received": false
+  },
+  "effective_from": null,
+  "cashback_snapshot_month": null,
+  "files": [
+    {
+      "path": "data/sources/vtb/2026-10-16-batch-01/received-text.txt",
+      "bytes": 14125,
+      "sha256": "701b0b71587d43ecde96576b981fa916eec530dd087f5e8e2217d37571d5822f"
+    },
+    {
+      "path": "data/sources/vtb/2026-10-16-batch-01/debit-card-overview.png",
+      "bytes": 720263,
+      "sha256": "dcf0d27ab847965df610621c7fb06bff31b92a85620070e46dd6da9011e3eec6"
+    },
+    {
+      "path": "data/sources/vtb/2026-10-16-batch-01/cashback-category-snapshot.png",
+      "bytes": 301638,
+      "sha256": "a28c137a9d6d5294d15b3c9d4d66af5d14d981ccc6c8f8a98dc8f92cec7de488"
+    }
+  ],
+  "structured_catalog": "data/products/vtb_offers.2026-10-16.json",
+  "active_product": "data/products/vtb_debit.v1.json"
+}

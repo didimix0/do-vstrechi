@@ -1,0 +1,551 @@
+{
+  "id": "vtb_offers_user_batch_20261016_01",
+  "version": "1.0.0-user-supplied",
+  "received_on": "2026-10-16",
+  "review_status": "user_supplied_site_materials_pending_full_rules",
+  "effective_from": null,
+  "source_manifest": "data/sources/vtb/2026-10-16-batch-01/manifest.json",
+  "sources": [
+    {
+      "id": "U01",
+      "title": "Текст с сайта ВТБ, переданный автором",
+      "local_path": "data/sources/vtb/2026-10-16-batch-01/received-text.txt",
+      "declared_urls": [
+        "https://www.vtb.ru/personal/karty/debetovye/multikarta/",
+        "https://www.vtb.ru/personal/rasti/"
+      ],
+      "access_method": "user_pasted_text",
+      "received_on": "2026-10-16",
+      "formatting": "Оформление и переносы строк нормализованы; повторяющиеся блоки сохранены, изображения и технические маркеры отделены от текста.",
+      "independently_fetched": false
+    },
+    {
+      "id": "U02",
+      "title": "Скриншот основного предложения дебетовой карты",
+      "local_path": "data/sources/vtb/2026-10-16-batch-01/debit-card-overview.png",
+      "url": "https://www.vtb.ru/personal/karty/debetovye/multikarta/",
+      "access_method": "user_screenshot",
+      "received_on": "2026-10-16",
+      "captured_on": null
+    },
+    {
+      "id": "U03",
+      "title": "Скриншот категорий этого месяца",
+      "local_path": "data/sources/vtb/2026-10-16-batch-01/cashback-category-snapshot.png",
+      "url": "https://www.vtb.ru/personal/karty/debetovye/multikarta/",
+      "access_method": "user_screenshot",
+      "received_on": "2026-10-16",
+      "captured_on": null,
+      "offer_month": null,
+      "client_eligibility_known": false
+    }
+  ],
+  "base_card_facts": [
+    {
+      "id": "P01",
+      "text": "В присланных условиях выпуск, обслуживание и перевыпуск обычной дебетовой карты указаны бесплатными. Это не означает бесплатность любых дополнительных услуг или неизменность тарифов навсегда.",
+      "values": {
+        "issue_rub": 0,
+        "service_rub": 0,
+        "reissue_rub": 0
+      },
+      "source_ids": [
+        "U01",
+        "U02"
+      ],
+      "source_quote": "Стоимость выпуска, обслуживания и перевыпуска\nБесплатно"
+    },
+    {
+      "id": "P02",
+      "text": "Кешбэк начисляется рублями за подходящие покупки в выбранных категориях; категории обновляются каждый месяц. На скриншоте есть отдельная категория «Все покупки» с 2%, но её месяц и доступность клиенту неизвестны: нельзя обещать этот процент всем без выбора категории, исключений и лимитов.",
+      "values": {
+        "reward_currency": "RUB",
+        "selection_period": "month",
+        "all_purchases_category_snapshot_percent": 2,
+        "snapshot_month": null
+      },
+      "source_ids": [
+        "U01",
+        "U03"
+      ],
+      "source_quote": "Кешбэк рублями, а не бонусами"
+    },
+    {
+      "id": "P03",
+      "text": "Уведомления по операциям стоят 129 рублей в месяц только при подключении. В «Расти с ВТБ» указаны 99 рублей для Серебряного уровня и скидка без точной суммы для Золотого. Бесплатное обслуживание карты не делает уведомления автоматически бесплатными.",
+      "values": {
+        "base_monthly_rub": 129,
+        "silver_monthly_rub": 99,
+        "gold_monthly_rub": null,
+        "only_if_connected": true
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "129 ₽ в месяц только при условии подключения."
+    },
+    {
+      "id": "P04",
+      "text": "Доставка указана бесплатной; сроки зависят от адреса и загруженности выездных сотрудников. Надпись «Доставим завтра» на скриншоте не устанавливает универсальную гарантию доставки на следующий день или фиксированную длительность выдачи.",
+      "values": {
+        "delivery_rub": 0,
+        "guaranteed_delivery_days": null,
+        "guaranteed_meeting_minutes": null
+      },
+      "source_ids": [
+        "U01",
+        "U02"
+      ],
+      "source_quote": "Сроки доставки зависят от адреса и загруженности сотрудников выездного канала"
+    },
+    {
+      "id": "P05",
+      "text": "Максимальный кешбэк за покупки по карте указан как 3000 рублей в месяц. Это верхний предел, а не гарантированное начисление. Порядок суммирования с партнёрскими начислениями требует полных правил.",
+      "values": {
+        "monthly_cashback_cap_rub": 3000
+      },
+      "source_ids": [
+        "U01",
+        "U02"
+      ],
+      "source_quote": "До 15% в категориях, максимально 3 000 ₽ в месяц"
+    },
+    {
+      "id": "P06",
+      "text": "Выпуск и обслуживание дополнительной карты для близких указаны бесплатными.",
+      "values": {
+        "issue_rub": 0,
+        "service_rub": 0
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "Дополнительная карта для близких\nБесплатно — выпуск и обслуживание"
+    },
+    {
+      "id": "P07",
+      "text": "В предложении указан кешбэк до 15% в категориях. Максимальный процент не относится ко всем покупкам и всем категориям; действуют правила и ограничения выбранного предложения.",
+      "values": {
+        "maximum_advertised_percent": 15,
+        "is_universal_rate": false
+      },
+      "source_ids": [
+        "U01",
+        "U02"
+      ],
+      "source_quote": "До 15% в категориях, максимально 3 000 ₽ в месяц"
+    },
+    {
+      "id": "P08",
+      "text": "Пять категорий для ежедневных покупок доступны новым клиентам в пробном периоде до трёх месяцев: месяц открытия карты плюс два следующих. Право Алексея на этот период не установлено; пять категорий не обещаются всем навсегда.",
+      "values": {
+        "categories": 5,
+        "maximum_trial_calendar_months": 3,
+        "includes_opening_month": true,
+        "following_months": 2
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "5 категорий кешбэка доступны всем новым клиентам в рамках пробного периода до 3 месяцев: месяц открытия карты плюс 2 месяца к этому периоду."
+    },
+    {
+      "id": "P09",
+      "text": "Категории выбираются в мобильном приложении или веб-версии ВТБ Онлайн. Банк рекомендует выбирать их с 26-го числа заранее для начисления с начала следующего месяца; это рекомендация, а не единственный разрешённый день выбора.",
+      "values": {
+        "recommended_selection_day": 26,
+        "categories_update": "monthly"
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "Мы рекомендуем выбирать заранее — 26 числа каждого месяца."
+    },
+    {
+      "id": "P10",
+      "text": "Для клиентов со сбережениями более 50000 рублей на счетах и вкладах ВТБ предлагаются специальные категории со звёздочкой. Сбережения Алексея и доступные ему категории неизвестны; дополнительные условия нужно сверить.",
+      "values": {
+        "savings_threshold_rub": 50000,
+        "threshold_comparison": "strictly_greater_than"
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "Для клиентов со сбережениями более 50 000 ₽ на счетах и вкладах ВТБ будут предложены специальные категории"
+    },
+    {
+      "id": "P11",
+      "text": "Для переводов по номеру телефона в ВТБ Онлайн в другие банки через СБП указан объём до 300000 рублей в месяц без комиссии. Нельзя переносить этот объём на любые способы переводов, собственные счета и все виды операций без проверки правил.",
+      "values": {
+        "commission_free_monthly_rub": 300000,
+        "channel": "SBP_phone_number_in_VTB_Online"
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "В другие банки на сумму до 300 000 ₽ с использованием СБП в месяц"
+    },
+    {
+      "id": "P12",
+      "text": "Переводы по номеру телефона в ВТБ Онлайн на счета других клиентов ВТБ указаны без комиссии. Числовой лимит по этой строке в переданном фрагменте не установлен.",
+      "values": {
+        "commission_free_amount_rub": null
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "По сумме на счет других клиентов ВТБ"
+    },
+    {
+      "id": "P13",
+      "text": "Оплата коммунальных услуг и мобильной связи в ВТБ Онлайн указана без комиссии. Это не обещание отсутствия комиссий у любых платежей и каналов.",
+      "values": {
+        "commission_rub": 0,
+        "payment_types": [
+          "utilities",
+          "mobile_phone"
+        ],
+        "channel": "VTB_Online"
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "— Коммунальных услуг\n— Мобильной связи"
+    },
+    {
+      "id": "P14",
+      "text": "Для обычной карты снятие в банкоматах группы ВТБ и банков-партнёров указано без комиссии до 1000000 рублей в месяц. Это не общий лимит выдачи и не бесплатное снятие в любом банке.",
+      "values": {
+        "commission_free_monthly_rub": 1000000,
+        "atm_scope": [
+          "VTB_group",
+          "partner_banks"
+        ]
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "В банкоматах группы ВТБ и банков-партнеров до 1 000 000 ₽ в месяц"
+    },
+    {
+      "id": "P15",
+      "text": "Для зарплатных клиентов и получателей пенсии на текущие счета ВТБ отдельно описано бесплатное снятие в банкоматах группы ВТБ и партнёров, а в банкоматах любых банков по стране — до 200000 рублей в месяц. Этот статус Алексею не присвоен; отдельный лимит по первой части нужно сверить с тарифом.",
+      "values": {
+        "other_banks_commission_free_monthly_rub": 200000,
+        "eligible_segments": [
+          "payroll",
+          "pension_paid_to_VTB_current_account"
+        ],
+        "VTB_and_partner_limit_in_special_segment": null
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "В банкоматах любых банков по всей стране до 200 000 ₽ в месяц"
+    },
+    {
+      "id": "P16",
+      "text": "Лимиты выдачи наличных в банкоматах указаны как 350000 рублей ежедневно и 2000000 рублей в месяц. Они отличаются от суммы снятия без комиссии.",
+      "values": {
+        "daily_withdrawal_limit_rub": 350000,
+        "monthly_withdrawal_limit_rub": 2000000
+      },
+      "source_ids": [
+        "U01"
+      ],
+      "source_quote": "350 000 ₽ ежедневно\n2 млн ₽ в месяц"
+    }
+  ],
+  "cashback_snapshot": {
+    "source_ids": [
+      "U03"
+    ],
+    "offer_month": null,
+    "valid_from": null,
+    "valid_to": null,
+    "client_eligibility_known": false,
+    "selection_required": true,
+    "notice": "Транскрипция скриншота, а не набор постоянно доступных категорий. Подлимиты, партнёрские начисления и общий предел нельзя автоматически суммировать или подменять друг другом.",
+    "categories": [
+      {
+        "id": "CB01",
+        "display_name": "Театры и кино",
+        "percent": 15,
+        "category_cashback_cap_rub": 1000
+      },
+      {
+        "id": "CB02",
+        "display_name": "Почта России",
+        "percent": 10,
+        "category_cashback_cap_rub": 500
+      },
+      {
+        "id": "CB03",
+        "display_name": "Аптеки, спортивные товары, дом и ремонт",
+        "percent": 5,
+        "category_cashback_cap_rub": null,
+        "note": "Названия показаны в одном блоке; число отдельных выбираемых категорий не установлено."
+      },
+      {
+        "id": "CB04",
+        "display_name": "Кафе и рестораны",
+        "percent": 3,
+        "category_cashback_cap_rub": null
+      },
+      {
+        "id": "CB05",
+        "display_name": "Супермаркеты",
+        "percent": 3,
+        "category_cashback_cap_rub": null
+      },
+      {
+        "id": "CB06",
+        "display_name": "Все покупки",
+        "percent": 2,
+        "category_cashback_cap_rub": null
+      },
+      {
+        "id": "CB07",
+        "display_name": "Tasty Coffee",
+        "percent": 12,
+        "category_cashback_cap_rub": 450
+      },
+      {
+        "id": "CB08",
+        "display_name": "ВТБ Путешествия",
+        "percent": 5,
+        "category_cashback_cap_rub": 1000
+      },
+      {
+        "id": "CB09",
+        "display_name": "Wildberries",
+        "percent": 3,
+        "category_cashback_cap_rub": 500
+      }
+    ]
+  },
+  "grow_with_vtb": {
+    "source_ids": [
+      "U01"
+    ],
+    "url": "https://www.vtb.ru/personal/rasti/",
+    "period": "monthly",
+    "level_names": [
+      "Базовый",
+      "Серебряный",
+      "Золотой"
+    ],
+    "required_actions_out_of_three": 2,
+    "actions": {
+      "credit": {
+        "types": [
+          "salary",
+          "pension",
+          "scholarship",
+          "automatic_top_up_from_other_bank_card"
+        ],
+        "required_amount_rub": null,
+        "threshold_is_individual": true
+      },
+      "hold": {
+        "minimum_days": 25,
+        "required_amount_rub": null,
+        "account_types": [
+          "accounts",
+          "deposits"
+        ],
+        "threshold_is_individual": true
+      },
+      "spend": {
+        "channels": [
+          "card",
+          "SBP"
+        ],
+        "required_amount_rub": null,
+        "threshold_is_individual": true,
+        "gold_minimum_card_purchases": 30,
+        "gold_purchase_count_scope": "В тексте относится к действию «Тратьте»; универсальная обязательность при выборе двух других действий не подтверждена."
+      }
+    },
+    "level_determined_by": "previous_month_actions",
+    "benefits_apply": "month_following_actions",
+    "if_actions_not_completed": "base_level_next_month",
+    "individual_conditions_location": "ВТБ Онлайн → Выгода",
+    "mentioned_start_dates": [
+      {
+        "display": "с 30 апреля",
+        "year": null
+      },
+      {
+        "display": "на Золотом уровне с 1 октября",
+        "year": null
+      }
+    ],
+    "levels": {
+      "base": {
+        "cashback_categories": 3,
+        "cashback_category_scope": "от партнёров",
+        "notifications_monthly_rub": 129,
+        "notifications_footnote_missing": true,
+        "payments_and_transfers": "без комиссии; полный перечень и лимиты не переданы",
+        "magnit_orders_in_VTB_Online_percent": 5
+      },
+      "silver": {
+        "cashback_categories": 4,
+        "notifications_monthly_rub": 99,
+        "notifications_footnote_missing": true,
+        "VTB_savings_account_bonus_display": "+1% годовых",
+        "VTB_deposit_bonus_display": "+0,25% годовых",
+        "bonus_footnotes_missing": true,
+        "payments_and_transfers": "без комиссии; полный перечень и лимиты не переданы",
+        "magnit_orders_in_VTB_Online_percent": 5,
+        "VTB_Mobile_grow_tariff_minimum_discount_percent": 50,
+        "Intellect_service_discount_percent": 20,
+        "securities_transaction_commission_discount_percent": 20
+      },
+      "gold": {
+        "cashback_categories": 5,
+        "cashback_category_scope": "для ежедневных покупок",
+        "notifications_monthly_rub": null,
+        "notifications_terms": "со скидкой; необходимо проверить подключение",
+        "VTB_savings_account_bonus_display": "+1,5% годовых",
+        "VTB_deposit_bonus_display": "+0,5% годовых",
+        "bonus_footnotes_missing": true,
+        "payments_and_transfers": "без комиссии; полный перечень и лимиты не переданы",
+        "magnit_orders_in_VTB_Online_percent": 10,
+        "VTB_Mobile_grow_tariff_discount_percent": 100,
+        "mobile_scope": "избранный номер с тарифом «Расти с ВТБ»",
+        "Intellect_service_discount_percent": 40,
+        "securities_transaction_commission_discount_percent": 40,
+        "partner_gift_certificate_after_consecutive_months": 3,
+        "new_credit_card_additional_cashback_category_days": 30,
+        "gift_certificate_amount_rub": null
+      }
+    }
+  },
+  "family_and_close": {
+    "source_ids": [
+      "U01"
+    ],
+    "group_creation_rub": 0,
+    "maximum_group_members": 6,
+    "new_participant_supermarket_cashback_percent": 5,
+    "new_participant_promo_days": 30,
+    "family_account_balance_rate_percent": 7,
+    "family_savings_balance_rate_percent": 9,
+    "balance_rate_period": null,
+    "balance_rate_notice": "Во фрагменте не указаны период ставки, остатки и условия начисления; не переносить эти ставки на дебетовую карту.",
+    "VTB_Plus_trial_days": 60,
+    "VTB_Plus_trial_rub": 0,
+    "VTB_Plus_after_trial_monthly_rub": 299,
+    "VTB_Plus_comparison_monthly_rub": 349,
+    "notice": "Преимущества группы и отдельных счетов, а не автоматические свойства каждой карты. Повторяющийся блок исходного текста объединён в одну запись."
+  },
+  "partner_offers": {
+    "source_ids": [
+      "U01"
+    ],
+    "yandex_market": {
+      "benefit": "специальные скидки",
+      "payment_method": "карта ВТБ",
+      "discount_application": "автоматически при оплате подходящего заказа",
+      "discount_percent": null
+    },
+    "yandex_travel": {
+      "cashback_percent": 10,
+      "conditions": [
+        "выбрать отель на лендинге",
+        "оплатить картой ВТБ"
+      ],
+      "cap_rub": null
+    },
+    "notice": "Полные сроки, перечни предложений и исключения не переданы. ВТБ Путешествия на скриншоте и Яндекс Путешествия в тексте — разные предложения."
+  },
+  "payment_tools": {
+    "source_ids": [
+      "U01"
+    ],
+    "VTBPay": {
+      "activation": "ВТБ Онлайн",
+      "required_card_system": "Мир",
+      "smartphone_OS": "Android",
+      "minimum_OS_version": "7.0"
+    },
+    "payment_sticker": {
+      "issue_price_from_rub": 399,
+      "monthly_service_rub": 0,
+      "notice": "Цена выпуска указана как «от», а не фиксированная для любого стикера."
+    }
+  },
+  "VTB_Plus": {
+    "source_ids": [
+      "U01"
+    ],
+    "is_separate_subscription": true,
+    "standard": {
+      "trial_days": 30,
+      "trial_rub": 0,
+      "after_trial_monthly_rub": 349
+    },
+    "family_group": {
+      "trial_days": 60,
+      "trial_rub": 0,
+      "after_trial_monthly_rub": 299,
+      "condition": "объединение в группу «Близкие»"
+    },
+    "cashback_categories_advertised_maximum": 6,
+    "cashback_categories_description": "3 категории для всех клиентов + 1 категория каждые выходные",
+    "category_count_notice": "Механика достижения «до 6» из этой строки не раскрыта. Не выводить число дополнительных категорий самостоятельно и не складывать автоматически с уровнями «Расти с ВТБ».",
+    "yandex_services": {
+      "persistent_cashback_category": true,
+      "combines_with_promotional_discounts": true,
+      "taxi_lavka_display": "Такси Лавка 5%",
+      "taxi_lavka_display_percent": 5,
+      "taxi_percent": null,
+      "lavka_percent": null,
+      "service_allocation_notice": "В переданном тексте названия Такси и Лавка идут слитно; точное распределение ставки между ними требует уточнения.",
+      "market_percent": 5,
+      "food_percent": 5,
+      "full_rules_missing": true
+    },
+    "savings_account_bonus_display": "+2%",
+    "savings_account_bonus_condition": "после завершения приветственной ставки",
+    "deposit_bonus_display": "до +0,3%",
+    "deposit_bonus_conditions": [
+      "подписка ВТБ Плюс активна",
+      "не суммируется с надбавкой за зарплату и пенсию"
+    ],
+    "international_transfers_commission_percent": 0,
+    "international_transfer_countries_display": "более 100",
+    "international_transfer_notice": "Каналы, направления, лимиты, курс и сторонние комиссии в фрагменте не раскрыты.",
+    "currency_exchange": {
+      "benefit": "улучшенный курс",
+      "currency_count_display": "более 10",
+      "examples": [
+        "CNY",
+        "AMD",
+        "KZT",
+        "BYN"
+      ],
+      "specific_rate": null
+    },
+    "Wink": {
+      "additional_monthly_charge_rub": 0,
+      "access_activation": "автоматически после оформления ВТБ Плюс",
+      "notice": "Нулевая отдельная плата за Wink не означает, что сама подписка ВТБ Плюс всегда бесплатна."
+    }
+  },
+  "open_questions": [
+    "Месяц, дата съёмки и период действия категорий на скриншоте не указаны.",
+    "Доступные категории и уровень конкретного учебного клиента не установлены.",
+    "Не переданы полные тарифы, правила кешбэка и расшифровки сносок *, ** и ***.",
+    "Условия отнесения к новым клиентам и правила пробного периода требуют полного документа.",
+    "Неизвестно, входят ли партнёрские начисления в общий предел 3000 рублей и как сочетаются программы.",
+    "В «Расти с ВТБ» суммы для действий индивидуальны; числовые пороги не переданы.",
+    "Нужно уточнить, когда требование 30 покупок обязательно для Золотого уровня.",
+    "Цена уведомлений на Золотом уровне не указана.",
+    "Год начала правил с 30 апреля и преимуществ с 1 октября не указан.",
+    "Для ставок Семейного счета и Семейной копилки не переданы период, пределы остатков и полные условия.",
+    "Описание «до 6 категорий» ВТБ Плюс не раскрывает полный порядок получения категорий."
+  ]
+}

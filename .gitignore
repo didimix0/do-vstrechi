@@ -27,14 +27,3 @@ build/
 *.egg-info/
 .DS_Store
 Thumbs.db
-
-# Bank documents and local training datasets are intentionally not published
-data/*
-!data/README.md
-*.docx
-*.xlsx
-*.pdf
-*.png
-*.jpg
-*.jpeg
-*.crt
